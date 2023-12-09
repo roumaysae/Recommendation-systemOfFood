@@ -1,0 +1,67 @@
+/* Text color */
+.text-color {
+    -fx-fill: #000000; /* Change text color to black */
+}
+
+/* Background color */
+.background-color {
+    -fx-background-color: #9CFFE4; /* Change background color */
+}
+
+/* Button color */
+.button-color {
+    -fx-background-color: #77B5BB; /* Change button color */
+}
+
+/* Overall background color */
+.root {
+    -fx-background-color: #DC9878; /* Change most of the background */
+}
+
+/* styles.css */
+
+/* styles.css */
+
+/* Meal Card Container */
+.meal-card {
+    -fx-background-color: #DC9878; /* Card background color */
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #DDDDDD; /* Border color */
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, #707070, 5, 0, 3, 3); /* Box shadow */
+}
+
+/* Meal Title */
+.meal-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333333; /* Title text color */
+}
+
+/* Meal Description */
+.meal-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666; /* Description text color */
+}
+
+/* Show More Button */
+.show-more-button {
+    -fx-background-color: #77B5BB; /* Button color */
+    -fx-text-fill: #FFFFFF; /* Button text color */
+    -fx-font-size: 16px;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #77B5BB; /* Button border color */
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.show-more-button:hover {
+    -fx-background-color: #6699AA; /* Button hover color */
+}
+
