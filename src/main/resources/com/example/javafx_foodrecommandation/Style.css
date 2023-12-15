@@ -1,29 +1,28 @@
 /* Style for the Home button */
 .btn-Home {
-    -fx-background-color: #3498db; /* Background color */
+    -fx-background-color: #2980b9; /* Background color */
     -fx-text-fill: white; /* Text color */
-    -fx-font-size: 14px; /* Font size */
+    -fx-font-size: 16px; /* Font size */
     -fx-padding: 8px 16px; /* Padding around the text */
     -fx-border-radius: 5px; /* Rounded corners */
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 5, 0.0 , 0 , 1 );
+    -fx-transition: all 0.3s;
 }
 
 /* Hover effect */
 .btn-Home:hover {
-    -fx-background-color: #2980b9; /* Darker background color on hover */
+    -fx-background-color: #1f618d; /* Darker background color on hover */
     -fx-cursor: hand; /* Change cursor to a hand pointer on hover */
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
 }
 
 /* Pressed effect */
 .btn-Home:pressed {
-    -fx-background-color: #1f618d; /* Even darker background color when pressed */
+    -fx-background-color: #2c3e50; /* Even darker background color when pressed */
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.8) , 15, 0.0 , 0 , 1 );
 }
 
-/* Styling for the title label */
-.title-label {
-    -fx-font-size: 18px;
-    -fx-text-fill: #2c3e50; /* Text color */
-    -fx-font-weight: bold;
-    -fx-alignment: center;
-    -fx-padding: 20px; /* Adjust padding as needed */
-    -fx-max-width: 300px; /* Set a maximum width to limit text flow */
+.background-image {
+    -fx-background-image: url('foodbackground1.jpg');
+    -fx-background-size: cover;
 }
