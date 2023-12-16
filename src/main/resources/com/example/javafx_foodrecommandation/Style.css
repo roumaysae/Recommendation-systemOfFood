@@ -1,28 +1,65 @@
 /* Style for the Home button */
 .btn-Home {
-    -fx-background-color: #2980b9; /* Background color */
+    -fx-background-color: #3498db; /* Background color */
     -fx-text-fill: white; /* Text color */
     -fx-font-size: 16px; /* Font size */
-    -fx-padding: 8px 16px; /* Padding around the text */
-    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 10px 20px; /* Padding around the text */
+    -fx-border-radius: 8px; /* Rounded corners */
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 5, 0.0 , 0 , 1 );
     -fx-transition: all 0.3s;
 }
 
 /* Hover effect */
 .btn-Home:hover {
-    -fx-background-color: #1f618d; /* Darker background color on hover */
+    -fx-background-color: #2980b9; /* Darker background color on hover */
     -fx-cursor: hand; /* Change cursor to a hand pointer on hover */
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
 }
 
 /* Pressed effect */
 .btn-Home:pressed {
-    -fx-background-color: #2c3e50; /* Even darker background color when pressed */
+    -fx-background-color: #1f618d; /* Even darker background color when pressed */
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.8) , 15, 0.0 , 0 , 1 );
 }
 
 .background-image {
     -fx-background-image: url('foodbackground1.jpg');
     -fx-background-size: cover;
+}
+
+/* Apply styles to the VBox and its children */
+VBox {
+    -fx-background-color: #ecf0f1; /* Light gray background color */
+    -fx-padding: 20; /* Add some padding to the VBox */
+    -fx-border-color: #bdc3c7; /* Light border color */
+    -fx-border-width: 2;
+    -fx-border-radius: 10px; /* Rounded corners */
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 5, 0.0 , 0 , 1 );
+}
+
+/* Apply styles to the Labels */
+Label {
+    -fx-font-size: 16px; /* Slightly larger font size for labels */
+    -fx-font-weight: bold; /* Make labels bold */
+    -fx-text-fill: #333; /* Dark gray text color */
+}
+
+/* Apply styles to the CheckBoxes */
+CheckBox {
+    -fx-font-size: 14px; /* Slightly larger font size for checkboxes */
+    -fx-text-fill: #555; /* Dark gray text color for checkboxes */
+}
+
+/* Apply styles to the Apply Button */
+Button {
+    -fx-background-color: #2ecc71; /* Light green background color for the button */
+    -fx-text-fill: white; /* Text color for the button */
+    -fx-font-size: 16px; /* Font size for the button */
+    -fx-padding: 12px 24px; /* Padding for the button */
+    -fx-border-radius: 8px; /* Rounded corners */
+}
+
+/* Apply hover effect to the Apply Button */
+Button:hover {
+    -fx-background-color: #27ae60; /* Darker green background color on hover */
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Controller">
+   <children>
+
+      <ScrollPane prefHeight="628.0" prefWidth="600.0" stylesheets="@Style.css">
+         <content>
+            <VBox alignment="CENTER" prefHeight="1635.0" prefWidth="580.0" spacing="20">
+               <!-- Cuisine Preferences -->
+               <VBox spacing="5">
+                  <Label text="Cuisine Preferences:" />
+                  <CheckBox text="Italian" />
+                  <CheckBox text="Mexican" />
+                  <CheckBox text="Asian" />
+                  <CheckBox text="Mediterranean" />
+                  <CheckBox text="American" />
+               </VBox>
+
+               <!-- Flavors and Ingredients -->
+               <VBox spacing="5">
+                  <Label text="Flavors and Ingredients:" />
+                  <CheckBox text="Spicy" />
+                  <CheckBox text="Sweet" />
+                  <CheckBox text="Savory" />
+                  <CheckBox text="Tangy" />
+                  <CheckBox text="Bitter" />
+                  <CheckBox text="No specific preference" />
+               </VBox>
+
+               <!-- Dietary Preferences -->
+               <VBox spacing="5">
+                  <Label text="Dietary Preferences:" />
+                  <CheckBox text="Vegetarian" />
+                  <CheckBox text="Vegan" />
+                  <CheckBox text="Omnivore" />
+                  <CheckBox text="Gluten-free" />
+                  <CheckBox text="Other (please specify)" />
+               </VBox>
+
+               <!-- Meal Type -->
+               <VBox spacing="5">
+                  <Label text="Meal Type:" />
+                  <CheckBox text="Quick and easy" />
+                  <CheckBox text="Balanced and nutritious" />
+                  <CheckBox text="Something fancy" />
+                  <CheckBox text="Comfort food" />
+                  <CheckBox text="Snack or appetizer" />
+               </VBox>
+
+               <!-- Ingredient Availability -->
+               <VBox spacing="5">
+                  <Label text="Ingredient Availability:" />
+                  <CheckBox text="I have a well-stocked kitchen" />
+                  <CheckBox text="Trying to use up specific ingredients (please specify)" />
+               </VBox>
+
+               <!-- Time for Preparation -->
+               <VBox spacing="5">
+                  <Label text="Time for Preparation:" />
+                  <CheckBox text="Less than 30 minutes" />
+                  <CheckBox text="30-60 minutes" />
+                  <CheckBox text="More than 60 minutes" />
+                  <CheckBox text="No time limit, I enjoy cooking" />
+               </VBox>
+
+               <!-- Meal Timing -->
+               <VBox spacing="5">
+                  <Label text="Meal Timing:" />
+                  <CheckBox text="Breakfast" />
+                  <CheckBox text="Lunch" />
+                  <CheckBox text="Dinner" />
+                  <CheckBox text="Anytime" />
+               </VBox>
+
+               <!-- Allergies -->
+               <VBox spacing="5">
+                  <Label text="Allergies:" />
+                  <CheckBox text="No allergies" />
+                  <CheckBox text="Gluten" />
+                  <CheckBox text="Dairy" />
+                  <CheckBox text="Nuts" />
+                  <CheckBox text="Shellfish" />
+                  <CheckBox text="Other (please specify)" />
+               </VBox>
+         
+               <!-- Apply Button -->
+               <Button text="Save" />
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
