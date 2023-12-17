@@ -124,9 +124,9 @@
                   </Label>
                </children>
             </HBox>
-            <ScrollPane fx:id="scrollPan" prefHeight="599.0" prefWidth="277.0" styleClass="transparent" stylesheets="@../../../Style.css">
+            <ScrollPane fx:id="scrollPan" prefHeight="788.0" prefWidth="277.0" styleClass="transparent" stylesheets="@../../../Style.css">
                <content>
-                  <GridPane fx:id="gridpane" prefHeight="192.0" prefWidth="273.0">
+                  <GridPane fx:id="gridpane" prefHeight="786.0" prefWidth="273.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
@@ -139,23 +139,18 @@
    <right>
       <VBox fx:id="chosenmealCard" prefHeight="855.0" prefWidth="334.0" spacing="10.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>
-            <HBox fx:id="nameMeal" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label prefHeight="49.0" prefWidth="105.0" text="Meal" textFill="#4a4a4a">
+                  <Label fx:id="nameMeal" prefHeight="49.0" prefWidth="105.0" text="Meal" textFill="#4a4a4a">
                      <font>
                         <Font name="Cambria Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label layoutX="105.0" layoutY="36.0" prefHeight="49.0" prefWidth="100.0" text="Title" textFill="#4a4a4a">
-                     <font>
-                        <Font name="Cambria" size="40.0" />
-                     </font>
-                  </Label>
                </children>
             </HBox>
-            <HBox fx:id="imageMeal" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imageMeal" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@public/meal1Consulting.jpg" />
                      </image>
