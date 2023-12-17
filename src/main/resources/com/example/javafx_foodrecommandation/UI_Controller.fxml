@@ -34,12 +34,12 @@
          <children>
             <ImageView cache="true" cacheHint="QUALITY" fitHeight="213.0" fitWidth="169.0" mouseTransparent="true" pickOnBounds="true" smooth="false">
                <image>
-                  <Image url="file:/C:/Users/USER-G1/IdeaProjects/JAVAFX_FOODRecommandation/src/main/resources/com/example/javafx_foodrecommandation/public/meal1.jpg" />
+                  <Image url="./javafx_foodrecommandation/public/meal1.jpg" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <Button fx:id="btn" layoutX="299.0" layoutY="502.0" mnemonicParsing="false" onAction="#submit" styleClass="btn-Home" text="Begin Your Culinary Journey" textAlignment="CENTER">
+      <Button fx:id="btn" layoutX="299.0" layoutY="502.0" mnemonicParsing="false" onAction="" styleClass="btn-Home" text="Begin Your Culinary Journey" textAlignment="CENTER">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                <stops>

@@ -4,18 +4,25 @@
 }
 
 /* Background color */
-.background-color {
-    -fx-background-color: #9CFFE4; /* Change background color */
+/* styles.css */
+
+/* Background with an Image */
+.background-image {
+    -fx-background-image: url('com/example/javafx_foodrecommandation/public/pexels-ella-olsson-1640773.jpg');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
 }
+
 
 /* Button color */
 .button-color {
-    -fx-background-color: #77B5BB; /* Change button color */
+    -fx-background-color: #F6C915; /* Change button color */
 }
 
 /* Overall background color */
 .root {
-    -fx-background-color: #DC9878; /* Change most of the background */
+    -fx-background-color: #EAE3C0; /* Change most of the background */
 }
 
 /* styles.css */
@@ -24,7 +31,7 @@
 
 /* Meal Card Container */
 .meal-card {
-    -fx-background-color: #DC9878; /* Card background color */
+    -fx-background-color: #A7C584; /* Card background color */
     -fx-padding: 15px;
     -fx-spacing: 10px;
     -fx-border-radius: 15px;
@@ -48,7 +55,7 @@
 
 /* Show More Button */
 .show-more-button {
-    -fx-background-color: #77B5BB; /* Button color */
+    -fx-background-color: #F6C915; /* Button color */
     -fx-text-fill: #FFFFFF; /* Button text color */
     -fx-font-size: 16px;
     -fx-padding: 8px 15px;
