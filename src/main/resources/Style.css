@@ -1,0 +1,95 @@
+/* Text color */
+.text-color {
+    -fx-fill: #000000; /* Change text color to black */
+}
+
+/* Background color */
+/* styles.css */
+
+/* Background with an Image */
+.background-image {
+    -fx-background-image: url('com/example/javafx_foodrecommandation/public/pexels-ella-olsson-1640773.jpg');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.button-color {
+    -fx-background-color: #F6C915; /* Change button color */
+    -fx-background-radius: 5; /* Border radius */
+}
+
+/* Hover effect */
+.button-color:hover {
+    -fx-background-color: #FFD700; /* Change color on hover */
+    -fx-background-radius: 5;
+}
+
+/* Clicked state */
+.button-color:pressed {
+    -fx-background-color: #DAA520; /* Change color when clicked */
+    -fx-background-radius: 5;
+}
+
+/* Shadow effect */
+.button-color {
+    -fx-effect: dropshadow(three-pass-box, #000, 10, 0, 0, 0);
+    /* Add a drop shadow with specific parameters */
+}
+
+
+/* Overall background color */
+.root {
+    -fx-background-color: #EAE3C0; /* Change most of the background */
+}
+
+/* styles.css */
+
+/* styles.css */
+
+/* Meal Card Container */
+.meal-card {
+    -fx-background-color: #A7C584; /* Card background color */
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #DDDDDD; /* Border color */
+    -fx-border-width: 1px;
+}
+.transparent{
+    -fx-background-color: #A7C584; /* Card background color */
+
+}
+/* Meal Title */
+.meal-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333333; /* Title text color */
+}
+
+/* Meal Description */
+.meal-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666; /* Description text color */
+}
+/* Show More Button */
+.show-more-button {
+    /* ... (previous styles) ... */
+    -fx-background-color: #F6C915; /* Button color */
+    /* ... (other styles) ... */
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-transition: all 0.3s; /* Add a transition for smooth effect */
+}
+
+.show-more-button:hover {
+    -fx-background-color: #EAE3C0; /* Button hover color */
+}
+
+.show-more-button:pressed {
+    -fx-background-color: #3E7B91; /* Button clicked color */
+    -fx-scale-x: 1.05; /* Scale button horizontally */
+    -fx-scale-y: 1.05; /* Scale button vertically */
+}

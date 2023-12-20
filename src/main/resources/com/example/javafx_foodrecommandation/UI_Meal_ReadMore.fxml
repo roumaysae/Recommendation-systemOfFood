@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="Meal_container" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" styleClass="meal-card" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label fx:id="title_card" alignment="CENTER" contentDisplay="CENTER" styleClass="meal-title" stylesheets="@../../../Style.css" text="Sushi Meal" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Text fx:id="decsription_card" fontSmoothingType="LCD" stroke="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="meal-description" text="Meal Description" textAlignment="CENTER" wrappingWidth="143.53515625">
+            <font>
+                <Font size="22.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Text>
+      <HBox fx:id="igredientbox" alignment="TOP_CENTER" prefHeight="129.0" prefWidth="294.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="91.0" prefWidth="244.0" spacing="12.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nori (seaweed), sushi rice, fish (salmon, tuna), vegetables (cucumber, avocado), soy sauce, wasabi.t" textAlignment="CENTER" wrappingWidth="244.0" />
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox fx:id="preparationsteps" alignment="TOP_CENTER" layoutX="26.0" layoutY="105.0" prefHeight="129.0" prefWidth="294.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="12.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preparation Steps" textAlignment="CENTER" wrappingWidth="289.0">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sushi rolls are made by rolling the ingredients in nori sheets with the help of a bamboo mat. The rolls are then sliced into bite-sized pieces." textAlignment="CENTER" wrappingWidth="244.0" />
+                  <Text layoutX="10.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutritional information" textAlignment="CENTER" wrappingWidth="338.0">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="45.0" prefWidth="318.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enjoy your meal :)" textAlignment="RIGHT" wrappingWidth="328.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+    </children>
+    <padding>
+        <Insets top="10.0" />
+    </padding>
+</VBox>
