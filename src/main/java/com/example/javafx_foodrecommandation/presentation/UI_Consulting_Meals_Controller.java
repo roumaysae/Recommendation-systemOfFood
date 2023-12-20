@@ -103,13 +103,6 @@ public class UI_Consulting_Meals_Controller implements Initializable {
                     }
                 gridpane.add(anchorPane,column++,row);//child + col + row
                 //set card grid with
-                gridpane.setMinWidth(Region.USE_COMPUTED_SIZE);
-                gridpane.setPrefWidth(Region.USE_PREF_SIZE);
-                gridpane.setMaxWidth(Region.USE_COMPUTED_SIZE);
-                //set card grid hieght
-                gridpane.setMinHeight(Region.USE_COMPUTED_SIZE);
-                gridpane.setPrefHeight(Region.USE_PREF_SIZE);
-                gridpane.setMaxHeight(Region.USE_COMPUTED_SIZE);
 
                 GridPane.setMargin(anchorPane,new Insets(10));
             }
@@ -118,5 +111,22 @@ public class UI_Consulting_Meals_Controller implements Initializable {
         }
         }
 
+    @FXML
+    private void HandleBackToFirstPage(ActionEvent event) {
+        try {
+            // Load the personalize.fxml file
+            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
+            Scene personalizeScene = new Scene(personalizeParent);
+
+            // Get the Stage information
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            // Set the new scene
+            window.setScene(personalizeScene);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle the exception accordingly
+        }
+    }
 }
 

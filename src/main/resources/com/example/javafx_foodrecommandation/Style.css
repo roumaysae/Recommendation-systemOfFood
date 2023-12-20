@@ -5,14 +5,20 @@
     -fx-font-size: 16px; /* Font size */
     -fx-padding: 10px 20px; /* Padding around the text */
     -fx-border-radius: 8px; /* Rounded corners */
+    -fx-font-weight: bold; /* Make the font bold */
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1); /* Add a subtle shadow effect */
+    -fx-background-radius: 8px; /* Rounded corners for the background */
+    -fx-border-color: #A7C584; /* Border color */
+    -fx-border-width: 2px; /* Border width */
     -fx-transition: all 0.3s;
 }
 
 /* Hover effect */
 .btn-Home:hover {
-    -fx-background-color: #6B8A47; /* Darker background color on hover */
-    -fx-cursor: hand; /* Change cursor to a hand pointer on hover */
+    -fx-background-color: #8FAE5D; /* Change background color on hover */
+    -fx-border-color: #8FAE5D; /* Change border color on hover */
 }
+
 
 /* Pressed effect */
 .btn-Home:pressed {
