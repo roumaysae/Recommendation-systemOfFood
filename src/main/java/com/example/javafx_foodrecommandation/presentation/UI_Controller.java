@@ -84,4 +84,21 @@ public class UI_Controller {
     }
 
 
+    @FXML
+    private void HandleBackToFirstPage(ActionEvent event) {
+        try {
+            // Load the personalize.fxml file
+            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
+            Scene personalizeScene = new Scene(personalizeParent);
+
+            // Get the Stage information
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            // Set the new scene
+            window.setScene(personalizeScene);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle the exception accordingly
+        }
+    }
 }
