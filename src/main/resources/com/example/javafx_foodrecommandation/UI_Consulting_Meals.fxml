@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855" prefWidth="955" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Consulting_Meals">
+<BorderPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855" prefWidth="955" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Consulting_Meals_Controller">
    <left>
       <VBox prefHeight="855.0" prefWidth="250.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>

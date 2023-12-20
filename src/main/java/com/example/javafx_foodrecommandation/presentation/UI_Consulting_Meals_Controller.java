@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class UI_Consulting_Meals  implements Initializable {
+public class UI_Consulting_Meals_Controller implements Initializable {
 
     @FXML
     private BorderPane Container;
@@ -31,7 +31,6 @@ public class UI_Consulting_Meals  implements Initializable {
 
     @FXML
     private GridPane gridpane;
-
 
     @FXML
     private ScrollPane scrollPan;
@@ -62,7 +61,7 @@ public class UI_Consulting_Meals  implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/resources/com/example/javafx_foodrecommandation/UI_Card_Meals.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
-                UI_Card_Meals ui_card_meals = fxmlLoader.getController();
+                UI_Card_Meals_Controller ui_card_meals = fxmlLoader.getController();
                                 ui_card_meals.setData(mealList.get(i));
                     if(column==3){
                         column=0;
