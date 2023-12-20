@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855" prefWidth="955" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Consulting_Meals_Controller">
+<BorderPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="955" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Consulting_Meals_Controller">
    <left>
       <VBox prefHeight="855.0" prefWidth="250.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>
@@ -56,7 +56,7 @@
                <children>
                   <HBox prefHeight="49.0" prefWidth="270.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#controllerMealsCategory" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 1 " textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 1 " textAlignment="CENTER">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -114,6 +114,7 @@
       </VBox>
    </left>
    <center>
+
       <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
@@ -125,9 +126,9 @@
                   </Label>
                </children>
             </HBox>
-            <ScrollPane fx:id="scrollPan" prefHeight="788.0" prefWidth="277.0" styleClass="transparent" stylesheets="@../../../Style.css">
+            <ScrollPane fx:id="scrollPan" prefHeight="829.0" prefWidth="277.0" styleClass="transparent" stylesheets="@../../../Style.css">
                <content>
-                  <GridPane fx:id="gridpane" prefHeight="786.0" prefWidth="273.0">
+                  <GridPane fx:id="gridpane" prefHeight="831.0" prefWidth="273.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
@@ -139,22 +140,24 @@
             </ScrollPane>
          </children>
       </VBox>
+
    </center>
+
    <right>
       <VBox fx:id="chosenmealCard" prefHeight="867.0" prefWidth="364.0" spacing="10.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="14.0" prefWidth="332.0">
                <children>
-                  <Label fx:id="nameMeal" prefHeight="21.0" prefWidth="159.0" text="Meal" textFill="#4a4a4a">
+                  <Label fx:id="nameMeal" contentDisplay="CENTER" prefHeight="54.0" prefWidth="98.0" text="Meal" textAlignment="CENTER" textFill="#4a4a4a">
                      <font>
-                        <Font name="Cambria Bold" size="24.0" />
+                        <Font name="Cambria Bold" size="44.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="49.0" prefWidth="233.0">
                <children>
-                  <Label fx:id="nameMeal1" alignment="CENTER" prefHeight="49.0" prefWidth="350.0" text="Country" textFill="#4a4a4a">
+                  <Label fx:id="mealCountry" alignment="CENTER" prefHeight="49.0" prefWidth="350.0" text="Country" textFill="#4a4a4a">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>

@@ -6,14 +6,25 @@ public class Meal {
         private String country;
         private String imageMeal;
 
+        private String ingredient;
+
     public Meal() {
     }
 
-    public Meal(String title, String instructions, String country, String imageMeal) {
+    public Meal(String title, String instructions, String country, String imageMeal,String ingredient) {
         this.title = title;
         this.instructions = instructions;
         this.country = country;
         this.imageMeal = imageMeal;
+        this.ingredient=ingredient;
+    }
+
+    public String getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(String ingredient) {
+        this.ingredient = ingredient;
     }
 
     public String getTitle() {
