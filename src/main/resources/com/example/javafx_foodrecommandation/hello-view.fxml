@@ -7,7 +7,7 @@
    <children>
       <AnchorPane fx:id="image1" prefHeight="600.0" prefWidth="800.0" styleClass="background-image" stylesheets="@Style.css">
          <children>
-            <Button fx:id="btn" alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="421.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" styleClass="btn-Home" text="View Meals by category" >
+            <Button fx:id="btn" alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="421.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" styleClass="btn-Home" text="View Meals by category" onAction="#handleMealsbyCategorie">
             </Button>
             <Button fx:id="btn1" alignment="CENTER" contentDisplay="CENTER" layoutX="444.0" layoutY="421.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" styleClass="btn-Home" text="Personalize your meal" onAction="#handleViewMealsClick"/>
          </children>
