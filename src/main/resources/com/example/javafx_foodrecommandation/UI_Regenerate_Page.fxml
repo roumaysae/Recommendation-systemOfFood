@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Regenerate_Page">
    <center>
       <VBox fx:id="centertoresult" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>
@@ -44,7 +44,7 @@
             <VBox fx:id="sidetohome" alignment="BOTTOM_CENTER" prefHeight="63.0" prefWidth="568.0" styleClass="background-image" stylesheets="@../../../Style.css" />
             <HBox alignment="CENTER" prefHeight="70.0" prefWidth="568.0" spacing="100.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="117.0" styleClass="button-color" text="Back " textAlignment="CENTER">
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="117.0" styleClass="button-color" text="Back "  onAction="#HandleBackToFirstPage" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>

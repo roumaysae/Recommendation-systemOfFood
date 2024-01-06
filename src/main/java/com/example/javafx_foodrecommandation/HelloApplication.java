@@ -16,6 +16,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Meals");
         stage.setScene(scene);
         stage.setFullScreen(true);
+        stage.setResizable(false);
         stage.show();
 
     }

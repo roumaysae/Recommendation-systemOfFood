@@ -111,7 +111,7 @@
 
                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="607.0" spacing="475.0">
                   <Button text="Back" onAction="#HandleBackToFirstPage"/>
-                  <Button text="Submit" />
+                  <Button text="Submit" onAction="#HandleGeneratePage" />
                </HBox>
             </VBox>
          </content>
