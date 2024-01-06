@@ -1,39 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="955" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Consulting_Meals_Controller">
+<BorderPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Consulting_Meals_Controller">
    <left>
-      <VBox maxHeight="1080.0" maxWidth="700.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="871.0" prefWidth="333.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="330.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="250.0" spacing="4.0" styleClass="meal-card" stylesheets="@../../../Style.css">
+            <VBox alignment="TOP_CENTER" prefHeight="144.0" prefWidth="301.0" spacing="15.0" styleClass="meal-card" stylesheets="@../../../Style.css">
                <children>
-                  <ImageView fitHeight="109.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@public/meal1.jpg" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="NONE" />
-                     </cursor>
-                     <effect>
-                        <InnerShadow />
-                     </effect>
-                  </ImageView>
                   <Label styleClass="text-color" stylesheets="@../../../Style.css" text="Meals Management System" textAlignment="CENTER">
                      <font>
                         <Font name="Cambria Bold" size="20.0" />
@@ -52,109 +36,84 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </VBox>
-            <VBox prefHeight="699.0" prefWidth="301.0" spacing="10.0">
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="301.0" spacing="10.0">
                <children>
-                  <HBox prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 1 " textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 2" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="59.0" prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 3" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="108.0" prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 4" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox layoutX="20.0" layoutY="188.0" prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 5" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="20.0" layoutY="244.0" prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 6" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="20.0" layoutY="290.0" prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 7" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="20.0" layoutY="336.0" prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 8" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="20.0" layoutY="382.0" prefHeight="49.0" prefWidth="270.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Categorie 9" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
+                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Beef" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Chicken" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Dessert" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="idCategoryOne" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Lamb" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Miscellaneous" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Pasta" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Seafood" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Side" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Starter" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="20.0" layoutY="491.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Vegan" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="20.0" layoutY="551.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Vegetarian" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="20.0" layoutY="610.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Breakfast" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="20.0" layoutY="651.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Goat" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </VBox>
             <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="289.0" styleClass="btn-Home" stylesheets="@Style.css">
                <children>
-                  <Button mnemonicParsing="false" onAction="#HandleBackToFirstPage" styleClass="button-color" stylesheets="@../../../Style.css" text="Back to Home" />
+                  <Button mnemonicParsing="false" onAction="#HandleBackToFirstPage" prefHeight="49.0" prefWidth="276.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Back to Home" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -170,10 +129,9 @@
       </VBox>
    </left>
    <center>
-
-      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: beige;">
                <children>
                   <Label contentDisplay="CENTER" graphicTextGap="8.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Meals Recommendation" textAlignment="CENTER">
                      <font>
@@ -182,27 +140,14 @@
                   </Label>
                </children>
             </HBox>
-            <ScrollPane fx:id="scrollPan" prefHeight="829.0" prefWidth="277.0" styleClass="transparent" stylesheets="@../../../Style.css">
-               <content>
-                  <GridPane fx:id="gridpane" prefHeight="831.0" prefWidth="200.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints />
-                     </rowConstraints>
-                  </GridPane>
-               </content>
-            </ScrollPane>
+            <ScrollPane fx:id="scrollPan" prefHeight="933.0" prefWidth="249.0" styleClass="transparent" stylesheets="@../../../Style.css" />
          </children>
       </VBox>
-
    </center>
-
    <right>
-      <VBox fx:id="chosenmealCard" maxHeight="897.0" maxWidth="437.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="897.0" prefWidth="421.0" spacing="10.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
+      <VBox fx:id="chosenmealCard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="400.0" spacing="10.0" styleClass="meal-card" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="14.0" prefWidth="332.0">
+            <HBox alignment="CENTER" prefHeight="14.0" prefWidth="400.0">
                <children>
                   <Label fx:id="nameMeal" contentDisplay="CENTER" prefHeight="54.0" prefWidth="98.0" text="Meal" textAlignment="CENTER" textFill="#4a4a4a">
                      <font>
@@ -213,14 +158,14 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="49.0" prefWidth="233.0">
                <children>
-                  <Label fx:id="mealCountry" alignment="CENTER" prefHeight="49.0" prefWidth="350.0" text="Country" textFill="#4a4a4a">
+                  <Label fx:id="mealCountry" alignment="CENTER" prefHeight="49.0" prefWidth="400.0" text="Country" textFill="#4a4a4a">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0">
                <children>
                   <ImageView fx:id="imageMeal" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -229,9 +174,9 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="100.0" prefWidth="400.0">
                <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="219.0" prefWidth="302.0" spacing="10.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="219.0" prefWidth="400.0" spacing="10.0">
                      <children>
                         <Label contentDisplay="CENTER" prefHeight="49.0" prefWidth="302.0" text="Ingredients" textAlignment="CENTER" textFill="#4a4a4a">
                            <font>
@@ -253,16 +198,16 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox layoutX="26.0" layoutY="296.0" prefHeight="100.0" prefWidth="200.0">
+            <HBox layoutX="26.0" layoutY="296.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0">
                <children>
-                  <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="381.0" spacing="10.0">
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" spacing="10.0">
                      <children>
                         <Label contentDisplay="CENTER" prefHeight="49.0" prefWidth="302.0" text="Instructions" textFill="#4a4a4a">
                            <font>
                               <Font name="Cambria Bold" size="40.0" />
                            </font>
                         </Label>
-                        <Text fx:id="InstructionsMeal" strokeType="OUTSIDE" strokeWidth="0.0" text="Place the raisins and prunes into a small bowl and pour over enough water to cover.Add lemon juice and let soak for at least 1 hour.Drain.Roughly chop the prunes.Meanwhile, heat the butter in a large pan, add the onion, and cook for 5 minutes.Add cubed lamb, ground lamb, and crushed garlic cloves.Fry for 5 minutes, stirring constantly until browned.Pour 2/3 cup (150 milliliters) of stock into the pan.Bring to a boil, then lower the heat, cover, and simmer for 1 hour, or until the lamb is tender.Add the remaining stock and bring to a boil.Add rinsed long-grain white rice and a large pinch of saffron.Stir, then cover, and simmer for 15 minutes, or until the rice is tender.Add the drained raisins, drained chopped prunes, and salt and pepper to taste.Heat through for a few minutes, then turn out onto a warmed serving dish and garnish with sprigs of flat-leaf parsley." wrappingWidth="371.0">
+                        <Text fx:id="InstructionsMeal" strokeType="OUTSIDE" strokeWidth="0.0" text="Place the raisins and prunes into a small bowl and pour over enough water to cover.Add lemon juice and let soak for at least 1 hour.Drain.Roughly chop the prunes.Meanwhile, heat the butter in a large pan, add the onion, and cook for 5 minutes.Add cubed lamb, ground lamb, and crushed garlic cloves.Fry for 5 minutes, stirring constantly until browned.Pour 2/3 cup (150 milliliters) of stock into the pan.Bring to a boil, then lower the heat, cover, and simmer for 1 hour, or until the lamb is tender.Add the remaining stock and bring to a boil.Add rinsed long-grain white rice and a large pinch of saffron.Stir, then cover, and simmer for 15 minutes, or until the rice is tender.Add the drained raisins, drained chopped prunes, and salt and pepper to taste.Heat through for a few minutes, then turn out onto a warmed serving dish and garnish with sprigs of flat-leaf parsley." wrappingWidth="329.0">
                            <font>
                               <Font name="Cambria" size="15.0" />
                            </font>
@@ -278,6 +223,9 @@
                </children>
             </HBox>
          </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
       </VBox>
    </right>
 </BorderPane>

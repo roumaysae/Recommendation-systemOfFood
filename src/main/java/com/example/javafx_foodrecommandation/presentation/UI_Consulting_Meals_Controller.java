@@ -10,6 +10,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
@@ -25,8 +26,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class UI_Consulting_Meals_Controller implements Initializable {
+public class UI_Consulting_Meals_Controller {
 
+    @FXML
+    private Button idCategoryOne;
     @FXML
     private Text IngredientMeal;
 
@@ -73,43 +76,44 @@ public class UI_Consulting_Meals_Controller implements Initializable {
         IngredientMeal.setText(meal.getIngredient());
         InstructionsMeal.setText(meal.getInstructions());
     }
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        mealList.addAll(getData());
-        if(!mealList.isEmpty()){
-            setChosenMeal(mealList.get(0));
-           listener = new Listener() {
-               @Override
-               public void onclikListener(Meal meal) {
-                   setChosenMeal(meal);
-               }
-           };
-        }
-        int column = 0;
-        int row =1;
-        try {
-            for (int i = 0; i < mealList.size(); i++) {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/resources/com/example/javafx_foodrecommandation/UI_Card_Meals.fxml"));
 
-                UI_Card_Meals_Controller ui_card_meals = fxmlLoader.getController();
-                ui_card_meals.setData(mealList.get(i),listener);
-
-                AnchorPane anchorPane = fxmlLoader.load();
-
-                    if(column==3){
-                        column=0;
-                        row++;
-                    }
-                gridpane.add(anchorPane,column++,row);//child + col + row
-                //set card grid with
-
-                GridPane.setMargin(anchorPane,new Insets(10));
-            }
-        } catch(IOException e){
-            throw new RuntimeException(e);
-        }
-        }
+//    @Override
+//    public void initialize(URL, ResourceBundle resourceBundle) {
+//        mealList.addAll(getData());
+//        if(!mealList.isEmpty()){
+//            setChosenMeal(mealList.get(0));
+//           listener = new Listener() {
+//               @Override
+//               public void onclikListener(Meal meal) {
+//                   setChosenMeal(meal);
+//               }
+//           };
+//        }
+//        int column = 0;
+//        int row =1;
+//        try {
+//            for (int i = 0; i < mealList.size(); i++) {
+//                FXMLLoader fxmlLoader = new FXMLLoader();
+//                fxmlLoader.setLocation(getClass().getResource("/resources/com/example/javafx_foodrecommandation/UI_Card_Meals.fxml"));
+//
+//                UI_Card_Meals_Controller ui_card_meals = fxmlLoader.getController();
+//                ui_card_meals.setData(mealList.get(i),listener);
+//
+//                AnchorPane anchorPane = fxmlLoader.load();
+//
+//                    if(column==3){
+//                        column=0;
+//                        row++;
+//                    }
+//                gridpane.add(anchorPane,column++,row);//child + col + row
+//                //set card grid with
+//
+//                GridPane.setMargin(anchorPane,new Insets(10));
+//            }
+//        } catch(IOException e){
+//            throw new RuntimeException(e);
+//        }
+//   }
 
     @FXML
     private void HandleBackToFirstPage(ActionEvent event) {
