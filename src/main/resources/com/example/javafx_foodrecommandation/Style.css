@@ -1,29 +1,34 @@
-/* Style for the Home button */
-.btn-Home {
-    -fx-background-color: #A7C584; /* Background color */
-    -fx-text-fill: white; /* Text color */
-    -fx-font-size: 16px; /* Font size */
-    -fx-padding: 10px 20px; /* Padding around the text */
-    -fx-border-radius: 8px; /* Rounded corners */
-    -fx-font-weight: bold; /* Make the font bold */
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1); /* Add a subtle shadow effect */
-    -fx-background-radius: 8px; /* Rounded corners for the background */
-    -fx-border-color: #A7C584; /* Border color */
-    -fx-border-width: 2px; /* Border width */
-    -fx-transition: all 0.3s;
-}
+/* Style for the Home button */.btn-Home {
+                                   -fx-background-color: #8FAE5D;
 
-/* Hover effect */
-.btn-Home:hover {
-    -fx-background-color: #8FAE5D; /* Change background color on hover */
-    -fx-border-color: #8FAE5D; /* Change border color on hover */
-}
+                                   -fx-text-fill: white;
+                                   -fx-font-size: 20px; /* Increase Font size */
+                                   -fx-padding: 15px 25px; /* Increase Padding */
+                                   -fx-border-radius: 12px; /* Rounded corners */
+                                   -fx-font-weight: bold;
+                                   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+                                   -fx-background-radius: 12px;
+                                   -fx-border-color: #A7C584;
+                                   -fx-border-width: 2px;
+                                   -fx-transition: all 0.3s;
+                               }
 
+                               .btn-Home:hover {
+                                                              -fx-background-color: #A7C584;
+                                                              -fx-border-color: #8FAE5D;
+                                                          }
 
-/* Pressed effect */
-.btn-Home:pressed {
-    -fx-background-color: #F6C915; /* Even darker background color when pressed */
-}
+                               .btn-Home:pressed {
+                                   -fx-background-color: #F6C915;
+                               }
+
+                               /* Larger dimensions for the button */
+                               .btn-Home:hover,
+                               .btn-Home:pressed,
+                               .btn-Home {
+                                   -fx-pref-height: 70px; /* Increase preferred height */
+                                   -fx-pref-width: 300px; /* Increase preferred width */
+                               }
 
 .background-image {
     -fx-background-image: url('pexels-ella-olsson-1640773.jpg');

@@ -26,6 +26,7 @@ public class UI_Controller {
 
             // Set the new scene
             window.setScene(personalizeScene);
+
             window.show();
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception accordingly
@@ -46,6 +47,7 @@ public class UI_Controller {
             // Set the new scene
             window.setScene(personalizeScene);
             window.show();
+
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception accordingly
         }
@@ -82,6 +84,28 @@ public class UI_Controller {
             otherDietaryTextField.clear();
         }
     }
+    @FXML
+    private void HandleGeneratePage(ActionEvent event) {
+        try {
+            // Load the regenerate_page.fxml file
+            Parent regenerateParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/UI_Regenerate_Page.fxml"));
+            Scene regenerateScene = new Scene(regenerateParent);
+
+            // Get the Stage information
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            // Set the new scene
+            window.setScene(regenerateScene);
+
+            // Set the stage to full-screen mode and disable resizing
+            window.setFullScreen(true);
+            window.setResizable(false);
+
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle the exception accordingly
+        }
+    }
 
 
     @FXML
@@ -96,6 +120,10 @@ public class UI_Controller {
 
             // Set the new scene
             window.setScene(personalizeScene);
+
+            // Set the stage to full-screen mode and disable resizing
+            window.setFullScreen(true);
+            window.setResizable(false);
             window.show();
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception accordingly

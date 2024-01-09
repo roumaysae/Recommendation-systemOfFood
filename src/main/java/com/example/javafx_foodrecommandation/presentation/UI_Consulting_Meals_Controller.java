@@ -122,15 +122,17 @@ public class UI_Consulting_Meals_Controller {
             Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
             Scene personalizeScene = new Scene(personalizeParent);
 
-            // Get the Stage information
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setFullScreen(true);
+            window.setResizable(false);
 
             // Set the new scene
             window.setScene(personalizeScene);
-            window.show();
-        } catch (IOException e) {
-            e.printStackTrace(); // Handle the exception accordingly
-        }
+
+        window.show();
+        } catch (IOException ex) {
+        throw new RuntimeException(ex);
+    }
     }
 }
 
