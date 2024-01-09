@@ -1,16 +1,20 @@
 package com.example.javafx_foodrecommandation.dao;
 
-public class Recommendation {
-    private String Title ;
-    private String Ingredients ;
-    private String Instructions ;
-    private String TimeOfPreparation ;
+import java.util.ArrayList;
 
-    public Recommendation(String title, String ingredients, String instructions, String timeOfPreparation) {
+public class Recommendation {
+    private String Title;
+    private String Ingredients;
+    private String Instructions;
+    private String TimeOfPreparation;
+    private ArrayList<Preferences> Preferences;
+
+    public Recommendation(String title, String ingredients, String instructions, String timeOfPreparation, ArrayList<com.example.javafx_foodrecommandation.dao.Preferences> preferences) {
         Title = title;
         Ingredients = ingredients;
         Instructions = instructions;
         TimeOfPreparation = timeOfPreparation;
+        Preferences = preferences;
     }
 
     public String getTitle() {
@@ -43,5 +47,13 @@ public class Recommendation {
 
     public void setTimeOfPreparation(String timeOfPreparation) {
         TimeOfPreparation = timeOfPreparation;
+    }
+
+    public ArrayList<com.example.javafx_foodrecommandation.dao.Preferences> getPreferences() {
+        return Preferences;
+    }
+
+    public void setPreferences(ArrayList<com.example.javafx_foodrecommandation.dao.Preferences> preferences) {
+        Preferences = preferences;
     }
 }
