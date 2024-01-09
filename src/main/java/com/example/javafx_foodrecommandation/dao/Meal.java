@@ -1,30 +1,32 @@
 package com.example.javafx_foodrecommandation.dao;
 
+import java.util.ArrayList;
+
 public class Meal {
         private String title;
         private String instructions;
         private String country;
         private String imageMeal;
 
-        private String ingredient;
+        private ArrayList<String> ingredients;
 
     public Meal() {
     }
 
-    public Meal(String title, String instructions, String country, String imageMeal,String ingredient) {
+    public Meal(String title, String instructions, String country, String imageMeal,ArrayList<String> ingredients) {
         this.title = title;
         this.instructions = instructions;
         this.country = country;
         this.imageMeal = imageMeal;
-        this.ingredient=ingredient;
+        this.ingredients=ingredients;
     }
 
-    public String getIngredient() {
-        return ingredient;
+    public ArrayList<String> getIngredient() {
+        return ingredients;
     }
 
     public void setIngredient(String ingredient) {
-        this.ingredient = ingredient;
+        this.ingredients = ingredients;
     }
 
     public String getTitle() {

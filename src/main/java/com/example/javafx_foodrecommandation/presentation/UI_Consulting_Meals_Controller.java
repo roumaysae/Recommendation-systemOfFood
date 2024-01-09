@@ -73,7 +73,7 @@ public class UI_Consulting_Meals_Controller {
         image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(meal.getImageMeal())));
         imageMeal.setImage(image);
         mealCountry.setText(meal.getCountry());
-        IngredientMeal.setText(meal.getIngredient());
+        IngredientMeal.setText(String.valueOf(meal.getIngredient()));
         InstructionsMeal.setText(meal.getInstructions());
     }
 
