@@ -7,18 +7,35 @@ public class Meal {
         private String instructions;
         private String country;
         private String imageMeal;
-
+        private Categorie categorie;
         private ArrayList<String> ingredients;
 
     public Meal() {
     }
 
-    public Meal(String title, String instructions, String country, String imageMeal,ArrayList<String> ingredients) {
+    public Meal(String title, String instructions, String country, String imageMeal, Categorie categorie, ArrayList<String> ingredients) {
         this.title = title;
         this.instructions = instructions;
         this.country = country;
         this.imageMeal = imageMeal;
-        this.ingredients=ingredients;
+        this.categorie = categorie;
+        this.ingredients = ingredients;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
+
+    public ArrayList<String> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(ArrayList<String> ingredients) {
+        this.ingredients = ingredients;
     }
 
     public ArrayList<String> getIngredient() {
