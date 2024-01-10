@@ -8,6 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -42,63 +43,72 @@
                         <children>
                            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Beef" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Chicken" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Dessert" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button fx:id="idCategoryOne" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Lamb" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Miscellaneous" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Pasta" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Seafood" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Side" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Starter" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button layoutX="20.0" layoutY="491.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Vegan" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button layoutX="20.0" layoutY="551.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Vegetarian" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
                            </Button>
                            <Button layoutX="20.0" layoutY="610.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Breakfast" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="22.0" />
+                                 <Font name="Cambria Bold" size="27.0" />
                               </font>
+                           </Button>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                           <Button mnemonicParsing="false" onAction="#HandleBackToFirstPage" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Back to Home">
+                              <font>
+                                 <Font name="Cambria Bold" size="13.0" />
+                              </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
                            </Button>
                         </children>
                         <VBox.margin>
@@ -108,17 +118,6 @@
                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                         </padding>
                      </VBox>
-                     <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="289.0" styleClass="btn-Home" stylesheets="@Style.css">
-                        <children>
-                           <Button mnemonicParsing="false" onAction="#HandleBackToFirstPage" prefHeight="49.0" prefWidth="276.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Back to Home" />
-                        </children>
-                        <padding>
-                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                        </padding>
-                        <opaqueInsets>
-                           <Insets />
-                        </opaqueInsets>
-                     </HBox>
                   </children>
                   <opaqueInsets>
                      <Insets />
@@ -133,15 +132,38 @@
                         <children>
                            <Label contentDisplay="CENTER" graphicTextGap="8.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Meals By Category" textAlignment="CENTER">
                               <font>
-                                 <Font name="System Bold" size="18.0" />
+                                 <Font name="Cambria Bold" size="28.0" />
                               </font>
                            </Label>
                         </children>
                      </HBox>
-                     <ScrollPane fx:id="scrollPan" prefHeight="933.0" prefWidth="249.0" styleClass="transparent" stylesheets="@../../../Style.css" />
+                     <VBox alignment="CENTER" prefHeight="800.0" prefWidth="764.0" spacing="20">
+                        <children>
+                           <!-- Attractive quote -->
+                           <Label styleClass="text-color" stylesheets="@../../../Style.css" text="Explore a world of flavors! 🌮🍕🍜" textAlignment="CENTER">
+                              <font>
+                                 <Font name="Cambria Bold" size="24.0" />
+                              </font>
+                           </Label>
+                           <!-- Additional engaging content -->
+                           <Label styleClass="text-color" stylesheets="@../../../Style.css" text="Select a category below to discover delicious meals." textAlignment="CENTER">
+                              <font>
+                                 <Font name="Cambria" size="18.0" />
+                              </font>
+                           </Label>
+                           <!-- Picture representing delicious food -->
+                           <ImageView>
+                              <image>
+                                 <Image url="@public/meals_pictures/brunch food-cuate.png" />
+                              </image>
+                              <fitHeight>398.0</fitHeight>
+                              <fitWidth>444.0</fitWidth>
+                              <!-- You can adjust fitHeight and fitWidth as needed -->
+                           </ImageView>
+                        </children>
+                     </VBox>
                   </children>
                </VBox>
-
             </center>
             <right>
                <VBox fx:id="chosenmealCard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="404.0" spacing="10.0" styleClass="meal-card" stylesheets="@../../../Style.css" visible="false" BorderPane.alignment="CENTER">
@@ -229,7 +251,50 @@
                      <Insets />
                   </opaqueInsets>
                </VBox>
-            </right>
+            </right><center>
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1022.0" vbarPolicy="NEVER">
+               <content>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1022.0" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: beige;">
+                           <children>
+                              <Label contentDisplay="CENTER" graphicTextGap="8.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Meals By Category" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Cambria Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox fx:id="categoryContent" alignment="CENTER" prefHeight="800.0" prefWidth="764.0" spacing="20">
+                           <children>
+                              <!-- Attractive quote -->
+                              <Label styleClass="text-color" stylesheets="@../../../Style.css" text="Explore a world of flavors! 🌮🍕🍜" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <!-- Additional engaging content -->
+                              <Label styleClass="text-color" stylesheets="@../../../Style.css" text="Select a category below to discover delicious meals." textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <!-- Picture representing delicious food -->
+                              <ImageView>
+                                 <image>
+                                    <Image url="@public/meals_pictures/brunch food-cuate.png" />
+                                 </image>
+                                 <fitHeight>398.0</fitHeight>
+                                 <fitWidth>444.0</fitWidth>
+                                 <!-- You can adjust fitHeight and fitWidth as needed -->
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </center>
          </BorderPane>
       </content>
    </ScrollPane>

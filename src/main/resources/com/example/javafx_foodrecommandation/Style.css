@@ -29,7 +29,10 @@
                                    -fx-pref-height: 70px; /* Increase preferred height */
                                    -fx-pref-width: 300px; /* Increase preferred width */
                                }
-
+.no-border .viewport {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0; /* Set border width to 0 */
+}
 .background-image {
     -fx-background-image: url('pexels-ella-olsson-1640773.jpg');
     -fx-background-size: cover;
