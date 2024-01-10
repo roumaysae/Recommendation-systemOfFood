@@ -126,11 +126,12 @@
                </VBox>
             </left>
             <center>
-               <VBox maxHeight="-Infinity" maxWidth="-Infinity"  prefHeight="1000.0" prefWidth="1022.0" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
+
+               <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1022.0" stylesheets="@../../../Style.css" BorderPane.alignment="CENTER">
                   <children>
                      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: beige;">
                         <children>
-                           <Label contentDisplay="CENTER" graphicTextGap="8.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Meals Recommendation" textAlignment="CENTER">
+                           <Label contentDisplay="CENTER" graphicTextGap="8.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Meals By Category" textAlignment="CENTER">
                               <font>
                                  <Font name="System Bold" size="18.0" />
                               </font>
@@ -140,6 +141,7 @@
                      <ScrollPane fx:id="scrollPan" prefHeight="933.0" prefWidth="249.0" styleClass="transparent" stylesheets="@../../../Style.css" />
                   </children>
                </VBox>
+
             </center>
             <right>
                <VBox fx:id="chosenmealCard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="404.0" spacing="10.0" styleClass="meal-card" stylesheets="@../../../Style.css" visible="false" BorderPane.alignment="CENTER">
