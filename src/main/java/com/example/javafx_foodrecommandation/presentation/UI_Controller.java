@@ -1,5 +1,6 @@
 package com.example.javafx_foodrecommandation.presentation;
 
+import com.example.javafx_foodrecommandation.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,17 +18,19 @@ public class UI_Controller {
     @FXML
     private void handleViewMealsClick(ActionEvent event) {
         try {
-            // Load the personalize.fxml file
-            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/personalize.fxml"));
-            Scene personalizeScene = new Scene(personalizeParent);
+            HelloApplication.switchScene("personalize.fxml");
 
-            // Get the Stage information
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-            // Set the new scene
-            window.setScene(personalizeScene);
-
-            window.show();
+//            // Load the personalize.fxml file
+//            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/personalize.fxml"));
+//            Scene personalizeScene = new Scene(personalizeParent);
+//
+//            // Get the Stage information
+//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//
+//            // Set the new scene
+//            window.setScene(personalizeScene);
+//
+//            window.show();
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception accordingly
         }
@@ -36,17 +39,17 @@ public class UI_Controller {
     @FXML
     private void handleMealsbyCategorie(ActionEvent event) {
         try {
-            // Load the personalize.fxml file
-            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/UI_Consulting_Meals.fxml"));
-
-            Scene personalizeScene = new Scene(personalizeParent);
-
-            // Get the Stage information
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-            // Set the new scene
-            window.setScene(personalizeScene);
-            window.show();
+                HelloApplication.switchScene("UI_Consulting_Meals.fxml");
+            //            // Load the personalize.fxml file
+//            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/UI_Consulting_Meals.fxml"));
+//            Scene personalizeScene = new Scene(personalizeParent);
+//
+//            // Get the Stage information
+//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//
+//            // Set the new scene
+//            window.setScene(personalizeScene);
+//            window.show();
 
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception accordingly
@@ -111,20 +114,22 @@ public class UI_Controller {
     @FXML
     private void HandleBackToFirstPage(ActionEvent event) {
         try {
-            // Load the personalize.fxml file
-            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
-            Scene personalizeScene = new Scene(personalizeParent);
+            HelloApplication.switchScene("hello-view.fxml");
 
-            // Get the Stage information
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-            // Set the new scene
-            window.setScene(personalizeScene);
-
-            // Set the stage to full-screen mode and disable resizing
-            window.setFullScreen(true);
-            window.setResizable(false);
-            window.show();
+//            // Load the personalize.fxml file
+//            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
+//            Scene personalizeScene = new Scene(personalizeParent);
+//
+//            // Get the Stage information
+//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//
+//            // Set the new scene
+//            window.setScene(personalizeScene);
+//
+//            // Set the stage to full-screen mode and disable resizing
+//            window.setFullScreen(true);
+//            window.setResizable(false);
+//            window.show();
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception accordingly
         }

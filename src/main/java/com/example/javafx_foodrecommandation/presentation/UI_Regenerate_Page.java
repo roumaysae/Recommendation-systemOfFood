@@ -29,7 +29,7 @@ public class UI_Regenerate_Page {
         private void HandleBackToFirstPage(ActionEvent event) {
                 try {
                         // Load the personalize.fxml file
-                        Parent regenerateParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
+                        Parent regenerateParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/personalize.fxml"));
                         Scene regenerateScene = new Scene(regenerateParent);
 
                         // Get the Stage information

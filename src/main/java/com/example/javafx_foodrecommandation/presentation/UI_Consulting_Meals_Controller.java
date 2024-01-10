@@ -1,5 +1,6 @@
 package com.example.javafx_foodrecommandation.presentation;
 
+import com.example.javafx_foodrecommandation.HelloApplication;
 import com.example.javafx_foodrecommandation.Listener;
 import com.example.javafx_foodrecommandation.dao.Meal;
 import javafx.event.ActionEvent;
@@ -35,6 +36,8 @@ public class UI_Consulting_Meals_Controller {
 
     @FXML
     private Text InstructionsMeal;
+    @FXML
+    private VBox chosenmealCard;
 
     @FXML
     private ImageView imageMeal;
@@ -118,18 +121,21 @@ public class UI_Consulting_Meals_Controller {
     @FXML
     private void HandleBackToFirstPage(ActionEvent event) {
         try {
-            // Load the personalize.fxml file
-            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
-            Scene personalizeScene = new Scene(personalizeParent);
+            HelloApplication.switchScene("hello-view.fxml");
 
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setFullScreen(true);
-            window.setResizable(false);
-
-            // Set the new scene
-            window.setScene(personalizeScene);
-
-        window.show();
+//            // Load the personalize.fxml file
+//            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
+//            Scene personalizeScene = new Scene(personalizeParent);
+//
+//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//
+//            // Set the stage to full-screen mode and disable resizing
+//            window.setFullScreen(true);
+//            window.setResizable(false);
+//
+//            // Set the new scene
+//            window.setScene(personalizeScene);
+//            window.show();
         } catch (IOException ex) {
         throw new RuntimeException(ex);
     }

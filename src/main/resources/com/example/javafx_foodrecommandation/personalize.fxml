@@ -4,20 +4,20 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.TextField?>
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Controller">
+<AnchorPane maxWidth="-Infinity" prefHeight="800.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Controller">
    <children>
-      <ScrollPane prefHeight="628.0" prefWidth="800.0" stylesheets="@Style.css">
+      <ScrollPane prefHeight="900.0" prefWidth="1315.0" stylesheets="@Style.css">
          <content>
-            <VBox fx:id="vbox1" alignment="CENTER" prefHeight="903.0" prefWidth="782.0" spacing="20">
+            <VBox fx:id="vbox1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="903.0" prefWidth="1315.0" spacing="20">
                <HBox alignment="CENTER" prefHeight="222.0" prefWidth="738.0" spacing="50.0">
                   <children>
                      <!-- Cuisine Preferences -->
-                     <VBox spacing="5.0" prefWidth="310.0" prefHeight="230.0">
+                     <VBox prefHeight="230.0" prefWidth="310.0" spacing="5.0">
                         <Label text="Cuisine Preferences:" />
                         <CheckBox text="Italian" />
                         <CheckBox text="Mexican" />
@@ -27,7 +27,7 @@
                      </VBox>
 
                      <!-- Flavors and Ingredients -->
-                     <VBox prefWidth="310.0" prefHeight="230.0" spacing="5">
+                     <VBox prefHeight="230.0" prefWidth="310.0" spacing="5">
                         <Label text="Flavors and Ingredients:" />
                         <CheckBox text="Spicy" />
                         <CheckBox text="Sweet" />
@@ -42,18 +42,18 @@
                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0" spacing="50.0">
                   <children>
                      <!-- Dietary Preferences -->
-                     <VBox prefWidth="310.0" prefHeight="230.0" spacing="5">
+                     <VBox prefHeight="230.0" prefWidth="310.0" spacing="5">
                         <Label text="Dietary Preferences:" />
                         <CheckBox text="Vegetarian" />
                         <CheckBox text="Vegan" />
                         <CheckBox text="Omnivore" />
                         <CheckBox text="Gluten-free" />
-                        <CheckBox fx:id="otherDietaryCheckbox" text="Other (please specify)" onAction="#handleOtherDietary"/>
-                        <TextField fx:id="otherDietaryTextField" promptText="Specify other dietary preferences" visible="false"/>
+                        <CheckBox fx:id="otherDietaryCheckbox" onAction="#handleOtherDietary" text="Other (please specify)" />
+                        <TextField fx:id="otherDietaryTextField" promptText="Specify other dietary preferences" visible="false" />
                      </VBox>
 
                      <!-- Meal Type -->
-                     <VBox spacing="5" prefWidth="310.0" prefHeight="230.0">
+                     <VBox prefHeight="230.0" prefWidth="310.0" spacing="5">
                         <Label text="Meal Type:" />
                         <CheckBox text="Quick and easy" />
                         <CheckBox text="Balanced and nutritious" />
@@ -67,7 +67,7 @@
                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="607.0" spacing="50.0">
                   <children>
                      <!-- Time for Preparation -->
-                     <VBox spacing="5" prefWidth="310.0" prefHeight="230.0">
+                     <VBox prefHeight="230.0" prefWidth="310.0" spacing="5">
                         <Label text="Time for Preparation:" />
                         <CheckBox text="Less than 30 minutes" />
                         <CheckBox text="30-60 minutes" />
@@ -76,7 +76,7 @@
                      </VBox>
 
                      <!-- Ingredient Availability -->
-                     <VBox prefWidth="310.0" prefHeight="230.0" spacing="5">
+                     <VBox prefHeight="230.0" prefWidth="310.0" spacing="5">
                         <Label text="Ingredient Availability:" />
                         <CheckBox text="I have a well-stocked kitchen" />
                         <CheckBox text="Specific ingredients (please specify)" />
@@ -87,7 +87,7 @@
                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="607.0" spacing="50.0">
                   <children>
                      <!-- Meal Timing -->
-                     <VBox spacing="5" prefWidth="310.0" prefHeight="230.0">
+                     <VBox prefHeight="230.0" prefWidth="310.0" spacing="5">
                         <Label text="Meal Timing:" />
                         <CheckBox text="Breakfast" />
                         <CheckBox text="Lunch" />
@@ -96,22 +96,22 @@
                      </VBox>
 
                      <!-- Allergies -->
-                     <VBox spacing="5" prefWidth="310.0" prefHeight="230.0">
+                     <VBox prefHeight="230.0" prefWidth="310.0" spacing="5">
                         <Label text="Allergies:" />
                         <CheckBox text="No allergies" />
                         <CheckBox text="Gluten" />
                         <CheckBox text="Dairy" />
                         <CheckBox text="Nuts" />
                         <CheckBox text="Shellfish" />
-                        <CheckBox fx:id="otherAllergiesCheckbox" text="Other (please specify)" onAction="#handleOtherAllergies"/>
-                        <TextField fx:id="otherAllergiesTextField" promptText="Specify other allergies" visible="false"/>
+                        <CheckBox fx:id="otherAllergiesCheckbox" onAction="#handleOtherAllergies" text="Other (please specify)" />
+                        <TextField fx:id="otherAllergiesTextField" promptText="Specify other allergies" visible="false" />
                      </VBox>
                   </children>
                </HBox>
 
                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="607.0" spacing="475.0">
-                  <Button text="Back" onAction="#HandleBackToFirstPage"/>
-                  <Button text="Submit" onAction="#HandleGeneratePage" />
+                  <Button onAction="#HandleBackToFirstPage" text="Back" />
+                  <Button onAction="#HandleGeneratePage" text="Submit" />
                </HBox>
             </VBox>
          </content>
