@@ -40,19 +40,8 @@ public class UI_Controller {
     private void handleMealsbyCategorie(ActionEvent event) {
         try {
                 HelloApplication.switchScene("UI_Consulting_Meals.fxml");
-            //            // Load the personalize.fxml file
-//            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/UI_Consulting_Meals.fxml"));
-//            Scene personalizeScene = new Scene(personalizeParent);
-//
-//            // Get the Stage information
-//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//
-//            // Set the new scene
-//            window.setScene(personalizeScene);
-//            window.show();
-
         } catch (IOException e) {
-            e.printStackTrace(); // Handle the exception accordingly
+            e.printStackTrace();
         }
     }
 
@@ -115,23 +104,8 @@ public class UI_Controller {
     private void HandleBackToFirstPage(ActionEvent event) {
         try {
             HelloApplication.switchScene("hello-view.fxml");
-
-//            // Load the personalize.fxml file
-//            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
-//            Scene personalizeScene = new Scene(personalizeParent);
-//
-//            // Get the Stage information
-//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//
-//            // Set the new scene
-//            window.setScene(personalizeScene);
-//
-//            // Set the stage to full-screen mode and disable resizing
-//            window.setFullScreen(true);
-//            window.setResizable(false);
-//            window.show();
         } catch (IOException e) {
-            e.printStackTrace(); // Handle the exception accordingly
+            e.printStackTrace();
         }
     }
 }

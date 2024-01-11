@@ -7,7 +7,6 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 public class Read {
-
     public static void main(String[] args) {
         try (MongoClient mongoClient = MongoClients.create(System.getProperty("mongodb.uri"))) {
             MongoDatabase MealsByCategory = mongoClient.getDatabase("MealsByCategory");

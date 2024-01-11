@@ -61,10 +61,10 @@ public class UI_Consulting_Meals_Controller implements Initializable {
     private List<Meal> getData() {
         List<Meal> meals = new ArrayList<>();
         Meal meal;
-        for (int i = 0; i <meals.size(); i++) {
+        for (int i = 0; i <4; i++) {
             meal = new Meal();
             meal.setTitle("Lamb Pilaf ");
-            meal.setImageMeal("../../resources/com/example/javafx_foodrecommandation/public/meal1Consulting.jpg");
+            meal.setImageMeal("com/example/javafx_foodrecommandation/public/meal1.jpg");
             meals.add(meal);
         }
         return meals;
@@ -85,20 +85,6 @@ public class UI_Consulting_Meals_Controller implements Initializable {
     private void HandleBackToFirstPage(ActionEvent event) {
         try {
             HelloApplication.switchScene("hello-view.fxml");
-
-//            // Load the personalize.fxml file
-//            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/hello-view.fxml"));
-//            Scene personalizeScene = new Scene(personalizeParent);
-//
-//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//
-//            // Set the stage to full-screen mode and disable resizing
-//            window.setFullScreen(true);
-//            window.setResizable(false);
-//
-//            // Set the new scene
-//            window.setScene(personalizeScene);
-//            window.show();
         } catch (IOException ex) {
         throw new RuntimeException(ex);
     }
