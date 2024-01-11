@@ -30,7 +30,7 @@ public class UI_Card_Meals_Controller {
     }
     public void setData(Meal meal,Listener listener) {
         this.meal = meal;
-            this.listener=listener;
+        this.listener=listener;
         nameMeal.setText(meal.getTitle());
 
         Image image = new Image(getClass().getResourceAsStream(meal.getImageMeal()));

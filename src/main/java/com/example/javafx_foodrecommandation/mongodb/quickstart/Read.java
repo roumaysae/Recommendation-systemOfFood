@@ -12,7 +12,6 @@ public class Read {
             MongoDatabase MealsByCategory = mongoClient.getDatabase("MealsByCategory");
             MongoCollection<Document> Categories = MealsByCategory.getCollection("Categories");
 
-            Document Category1 = Categories.find().first();
         }
     }
 }

@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
@@ -43,7 +44,7 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </VBox>
-                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="892.0" prefWidth="295.0" spacing="10.0">
+                  <VBox fx:id="categoryButtonsContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="892.0" prefWidth="295.0" spacing="10.0">
                      <children>
                         <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style.css" text="Beef" textAlignment="CENTER">
                            <font>

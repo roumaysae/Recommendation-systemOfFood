@@ -39,7 +39,7 @@ public class UI_Controller {
     @FXML
     private void handleMealsbyCategorie(ActionEvent event) {
         try {
-                HelloApplication.switchScene("UI_Consulting_Meals.fxml");
+            HelloApplication.switchScene("UI_Consulting_Meals.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }

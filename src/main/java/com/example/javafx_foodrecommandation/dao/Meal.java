@@ -8,12 +8,12 @@ public class Meal {
         private String country;
         private String imageMeal;
         private Categorie categorie;
-        private ArrayList<String> ingredients;
+        private ArrayList<Ingredient> ingredients;
 
     public Meal() {
     }
 
-    public Meal(String title, String instructions, String country, String imageMeal, Categorie categorie, ArrayList<String> ingredients) {
+    public Meal(String title, String instructions, String country, String imageMeal, Categorie categorie, ArrayList<Ingredient> ingredients) {
         this.title = title;
         this.instructions = instructions;
         this.country = country;
@@ -30,15 +30,15 @@ public class Meal {
         this.categorie = categorie;
     }
 
-    public ArrayList<String> getIngredients() {
+    public ArrayList<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(ArrayList<String> ingredients) {
+    public void setIngredients(ArrayList<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 
-    public ArrayList<String> getIngredient() {
+    public ArrayList<Ingredient> getIngredient() {
         return ingredients;
     }
 
@@ -77,4 +77,6 @@ public class Meal {
     public void setImageMeal(String imageMeal) {
         this.imageMeal = imageMeal;
     }
+
+
 }
