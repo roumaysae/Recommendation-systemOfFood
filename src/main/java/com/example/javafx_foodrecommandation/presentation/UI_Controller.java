@@ -1,6 +1,5 @@
 package com.example.javafx_foodrecommandation.presentation;
 
-import com.example.javafx_foodrecommandation.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

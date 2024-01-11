@@ -75,7 +75,11 @@ public class UI_Consulting_Meals_Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        MongoClient mongoClient = MongoClients.create(System.getProperty("mongodb.uri"));
+        String mongoUri = System.getProperty("mongodb.uri", "mongodb://localhost:27017");
+        MongoClient mongoClient = MongoClients.create(mongoUri);
+
+//        MongoClient mongoClient = MongoClients.create(System.getProperty("mongodb.uri"));
+
         database = mongoClient.getDatabase("MealsByCategory");
 
         List<String> categories = List.of("Beef", "Chicken", "Dessert", "Lamb", "Miscellaneous", "Pasta", "Seafood", "Side", "Starter", "Vegan", "Vegetarian", "Breakfast");
