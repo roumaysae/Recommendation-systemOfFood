@@ -12,25 +12,27 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
+
+import static com.example.javafx_foodrecommandation.HelloApplication.*;
 
 public class UI_Controller {
 
     @FXML
     private void handleViewMealsClick(ActionEvent event) {
         try {
-            HelloApplication.switchScene("personalize.fxml");
+            switchScene("personalize.fxml");
+            /*// Load the personalize.fxml file
+           Parent personalizeParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("personalize.fxml")));
+           Scene personalizeScene = new Scene(personalizeParent);
 
-//            // Load the personalize.fxml file
-//            Parent personalizeParent = FXMLLoader.load(getClass().getResource("/com/example/javafx_foodrecommandation/personalize.fxml"));
-//            Scene personalizeScene = new Scene(personalizeParent);
-//
-//            // Get the Stage information
-//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//
-//            // Set the new scene
-//            window.setScene(personalizeScene);
-//
-//            window.show();
+           // Get the Stage information
+           Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            // Set the new scene
+           window.setScene(personalizeScene);
+
+           window.show();*/
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception accordingly
         }
@@ -39,7 +41,7 @@ public class UI_Controller {
     @FXML
     private void handleMealsbyCategorie(ActionEvent event) {
         try {
-            HelloApplication.switchScene("UI_Consulting_Meals.fxml");
+            switchScene("UI_Consulting_Meals.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -103,7 +105,7 @@ public class UI_Controller {
     @FXML
     private void HandleBackToFirstPage(ActionEvent event) {
         try {
-            HelloApplication.switchScene("hello-view.fxml");
+            switchScene("hello-view.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }

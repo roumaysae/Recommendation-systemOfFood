@@ -102,7 +102,7 @@ public class UI_Consulting_Meals_Controller implements Initializable {
                 Meal meal = convertDocumentToMeal(mealDocument);
                 mealList.add(meal);
             }
-            //refreshUI();
+            refreshUI();
         }
     }
 
