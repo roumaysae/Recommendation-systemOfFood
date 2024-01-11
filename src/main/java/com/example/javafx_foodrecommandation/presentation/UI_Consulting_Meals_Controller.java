@@ -6,6 +6,9 @@ import com.example.javafx_foodrecommandation.dao.Meal;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -17,12 +20,14 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
-public class UI_Consulting_Meals_Controller implements  Initializable {
+public class UI_Consulting_Meals_Controller implements Initializable {
 
     @FXML
     private Button idCategoryOne;
