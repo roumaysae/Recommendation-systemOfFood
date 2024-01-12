@@ -45,62 +45,62 @@
                   </VBox>
                   <VBox fx:id="categoryButtonsContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="892.0" prefWidth="295.0" spacing="10.0">
                      <children>
-                        <Button fx:id="buttonBeef" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Beef" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Beef" textAlignment="CENTER" fx:id="buttonBeef">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonChicken" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Chicken" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Chicken" textAlignment="CENTER" fx:id="buttonChicken">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonDessert" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Dessert" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Dessert" textAlignment="CENTER" fx:id="buttonDessert">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonLamb" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Lamb" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Lamb" textAlignment="CENTER" fx:id="buttonLamb">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonMiscellaneous" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Miscellaneous" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Miscellaneous" textAlignment="CENTER" fx:id="buttonMiscellaneous">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonPasta" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Pasta" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Pasta" textAlignment="CENTER" fx:id="buttonPasta">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonSeafood" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Seafood" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Seafood" textAlignment="CENTER" fx:id="buttonSeafood">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonSide" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Side" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Side" textAlignment="CENTER" fx:id="buttonSide">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonStarter" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Starter" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Starter" textAlignment="CENTER" fx:id="buttonStarter">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonVegan" layoutX="20.0" layoutY="491.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Vegan" textAlignment="CENTER">
+                        <Button layoutX="20.0" layoutY="491.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Vegan" textAlignment="CENTER" fx:id="buttonVegan">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonVegetarian" layoutX="20.0" layoutY="551.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Vegetarian" textAlignment="CENTER">
+                        <Button layoutX="20.0" layoutY="551.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Vegetarian" textAlignment="CENTER" fx:id="buttonVegetarian">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonBreakfast" layoutX="20.0" layoutY="610.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Breakfast" textAlignment="CENTER">
+                        <Button layoutX="20.0" layoutY="610.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="271.0" styleClass="button-color" stylesheets="@../../../Style1.css" text="Breakfast" textAlignment="CENTER" fx:id="buttonBreakfast">
                            <font>
                               <Font name="Cambria Bold" size="27.0" />
                            </font>
@@ -132,7 +132,7 @@
    <center>
       <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1022.0" vbarPolicy="NEVER">
          <content>
-            <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1022.0" stylesheets="@../../../Style1.css" BorderPane.alignment="CENTER">
+            <VBox fx:id="mealDetails" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1022.0" stylesheets="@../../../Style1.css" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: beige;">
                      <children>
@@ -150,7 +150,7 @@
                               <Font name="Cambria Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label styleClass="text-color" stylesheets="@../../../Style1.css" text="Select a category below to discover delicious meals." textAlignment="CENTER">
+                        <Label styleClass="text-color" stylesheets="@../../../Style1.css" text="Select a category to discover delicious meals." textAlignment="CENTER">
                            <font>
                               <Font name="Cambria" size="18.0" />
                            </font>
@@ -161,9 +161,6 @@
                            </image>
                         </ImageView>
                      </children>
-                     <VBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </VBox.margin>
                   </VBox>
                </children>
             </VBox>

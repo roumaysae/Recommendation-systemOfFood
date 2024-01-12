@@ -58,40 +58,15 @@ public class UI_Consulting_Meals_Controller implements Initializable {
     private Button buttonVegetarian;
     @FXML
     private Button buttonBreakfast;
-
     @FXML
-    private VBox categoryButtonsContainer;
-
-    @FXML
-    private Text IngredientMeal;
-
-    @FXML
-    private Text InstructionsMeal;
-
-    @FXML
-    private VBox chosenmealCard;
-
-    @FXML
-    private ImageView imageMeal;
-
-    @FXML
-    private Label mealCountry;
-
-    @FXML
-    private Label nameMeal;
-
-    @FXML
-    private GridPane gridpane;
-
-    @FXML
-    private ScrollPane scrollPan;
-    @FXML
-    private VBox Meal_container;
+    private VBox mealDetails;
     @FXML
     private VBox categoryContent;
 
+
+
     private Listener listener;
-    private List<Meal> mealList = new ArrayList<>();
+    private final List<Meal> mealList = new ArrayList<>();
     private Image image;
     private MongoDatabase database;
 
@@ -244,5 +219,6 @@ public class UI_Consulting_Meals_Controller implements Initializable {
                 throw new RuntimeException(e);
             }
         }
+
     }
 }
