@@ -43,4 +43,7 @@ public class UI_Card_Meals_Controller {
         ImageCard.setImage(image);
 
     }
+    public void showMore() {
+
+    }
 }

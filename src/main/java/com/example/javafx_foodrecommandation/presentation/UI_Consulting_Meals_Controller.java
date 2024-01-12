@@ -23,6 +23,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import org.bson.Document;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -34,29 +35,29 @@ public class UI_Consulting_Meals_Controller implements Initializable {
 
     public BorderPane Container;
     @FXML
-    private Button buttonBeef ;
+    private Button buttonBeef;
     @FXML
-    private Button buttonChicken ;
+    private Button buttonChicken;
     @FXML
-    private Button buttonDessert ;
+    private Button buttonDessert;
     @FXML
-    private Button buttonLamb ;
+    private Button buttonLamb;
     @FXML
-    private Button buttonMiscellaneous ;
+    private Button buttonMiscellaneous;
     @FXML
-    private Button buttonPasta ;
+    private Button buttonPasta;
     @FXML
-    private Button buttonSeafood ;
+    private Button buttonSeafood;
     @FXML
-    private Button buttonSide ;
+    private Button buttonSide;
     @FXML
-    private Button buttonStarter ;
+    private Button buttonStarter;
     @FXML
-    private Button buttonVegan ;
+    private Button buttonVegan;
     @FXML
-    private Button buttonVegetarian ;
+    private Button buttonVegetarian;
     @FXML
-    private Button buttonBreakfast ;
+    private Button buttonBreakfast;
 
     @FXML
     private VBox categoryButtonsContainer;
@@ -111,42 +112,48 @@ public class UI_Consulting_Meals_Controller implements Initializable {
 
         List<String> categories = List.of("Beef", "Chicken", "Dessert", "Lamb", "Miscellaneous", "Pasta", "Seafood", "Side", "Starter", "Vegan", "Vegetarian", "Breakfast");
 
-        for (String category : categories) {
-            if (Objects.equals(category, "Beef")) {
-                buttonBeef.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Chicken")) {
-                buttonChicken.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Dessert")) {
-                buttonDessert.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Lamb")) {
-                buttonLamb.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Miscellaneous")) {
-                buttonMiscellaneous.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Pasta")) {
-                buttonPasta.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Seafood")) {
-                buttonSeafood.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Side")) {
-                buttonSide.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Starter")) {
-                buttonStarter.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Vegan")) {
-                buttonVegan.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Vegetarian")) {
-                buttonVegetarian.setOnAction(e -> handleCategoryButtonClick(category));
-            }
-            if (Objects.equals(category, "Breakfast")) {
-                buttonBreakfast.setOnAction(e -> handleCategoryButtonClick(category));
+        for (int i = 0; i < categories.size(); i++) {
+            int index = i;  // Store the current index in a local variable
+
+            switch (categories.get(i)) {
+                case "Beef":
+                    buttonBeef.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Chicken":
+                    buttonChicken.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Dessert":
+                    buttonDessert.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Lamb":
+                    buttonLamb.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Miscellaneous":
+                    buttonMiscellaneous.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Pasta":
+                    buttonPasta.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Seafood":
+                    buttonSeafood.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Side":
+                    buttonSide.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Starter":
+                    buttonStarter.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Vegan":
+                    buttonVegan.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Vegetarian":
+                    buttonVegetarian.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                case "Breakfast":
+                    buttonBreakfast.setOnAction(e -> handleCategoryButtonClick(categories.get(index)));
+                    break;
+                default:
+                    break;
             }
         }
     }
@@ -159,27 +166,29 @@ public class UI_Consulting_Meals_Controller implements Initializable {
         Document categoryDocument = categoriesCollection.find(query).first();
 
         if (categoryDocument != null) {
-            System.out.println("Category Document: " + categoryDocument.toJson()); // Print categoryDocument
-
             List<Document> categories = categoryDocument.getList("categories", Document.class);
 
             if (categories != null && !categories.isEmpty()) {
-                // Assuming you want the first category, change index if needed
-                Document categoryObject = categories.get(0);
+                Document categoryObject = categories.stream()
+                        .filter(category -> categoryName.equals(category.getString("strCategory")))
+                        .findFirst()
+                        .orElse(null);
 
-                List<Document> mealsDocuments = categoryObject.getList("meals", Document.class);
+                if (categoryObject != null) {
+                    List<Document> mealsDocuments = categoryObject.getList("meals", Document.class);
 
-                if (mealsDocuments != null) {
-                    System.out.println("Meals Documents: " + mealsDocuments);
-
-                    mealList.clear();
-                    for (Document mealDocument : mealsDocuments) {
-                        Meal meal = convertDocumentToMeal(mealDocument);
-                        mealList.add(meal);
+                    if (mealsDocuments != null) {
+                        mealList.clear();
+                        for (Document mealDocument : mealsDocuments) {
+                            Meal meal = convertDocumentToMeal(mealDocument);
+                            mealList.add(meal);
+                        }
+                        refreshUI();
+                    } else {
+                        System.out.println("Meals Documents is null for: " + categoryName);
                     }
-                    refreshUI();
                 } else {
-                    System.out.println("Meals Documents is null for: " + categoryName);
+                    System.out.println("No category found for: " + categoryName);
                 }
             } else {
                 System.out.println("No categories found for: " + categoryName);
@@ -188,10 +197,6 @@ public class UI_Consulting_Meals_Controller implements Initializable {
             System.out.println("Category document not found for: " + categoryName);
         }
     }
-
-
-
-
 
     private Meal convertDocumentToMeal(Document mealDocument) {
         Meal meal = new Meal();
@@ -224,9 +229,8 @@ public class UI_Consulting_Meals_Controller implements Initializable {
         for (Meal meal : mealList) {
             try {
 
-// Load the FXML directly with the controller
+                // Load the FXML directly with the controller
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("UI_Card_Meals.fxml"));
-// System.out.println(getClass().getResource("src/main/resources/com/example/javafx_foodrecommandation/UI_Card_Meals.fxml"));
                 VBox mealCard = fxmlLoader.load();
 
                 // Get the controller associated with the loaded FXML
@@ -241,5 +245,4 @@ public class UI_Consulting_Meals_Controller implements Initializable {
             }
         }
     }
-
 }
