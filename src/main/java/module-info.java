@@ -4,6 +4,7 @@ module com.example.javafx_foodrecommandation {
     requires org.mongodb.driver.sync.client;
     requires org.mongodb.bson;
     requires org.mongodb.driver.core;
+    requires java.net.http;
 
 
     opens com.example.javafx_foodrecommandation to javafx.fxml;

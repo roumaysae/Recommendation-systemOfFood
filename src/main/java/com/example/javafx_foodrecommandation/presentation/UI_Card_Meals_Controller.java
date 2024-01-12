@@ -1,5 +1,6 @@
 package com.example.javafx_foodrecommandation.presentation;
 
+import com.example.javafx_foodrecommandation.HelloApplication;
 import com.example.javafx_foodrecommandation.Listener;
 import com.example.javafx_foodrecommandation.dao.Meal;
 import javafx.event.ActionEvent;
@@ -20,7 +21,6 @@ import java.util.Objects;
 
 public class UI_Card_Meals_Controller {
     public VBox Meal_container;
-    public HBox MealName;
     @FXML
     private Button ButtonCard;
     @FXML
@@ -31,7 +31,7 @@ public class UI_Card_Meals_Controller {
 
     private Listener listener;
     @FXML
-    private void click(MouseEvent mouseEvent){
+    void click(MouseEvent mouseEvent){
         listener.onclikListener(meal);
     }
     public void setData(Meal meal,Listener listener) {
@@ -39,7 +39,7 @@ public class UI_Card_Meals_Controller {
         this.listener=listener;
         nameMeal.setText(meal.getTitle());
 
-        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(meal.getImageMeal())));
+        Image image = new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream(meal.getImageMeal())));
         ImageCard.setImage(image);
 
     }

@@ -8,12 +8,10 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -225,10 +223,11 @@ public class UI_Consulting_Meals_Controller implements Initializable {
         // Add new meal cards to the categoryContent VBox
         for (Meal meal : mealList) {
             try {
-                // Load the FXML directly with the controller
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UI_Card_Meals.fxml"));
-                System.out.println(getClass().getResource("src/main/resources/com/example/javafx_foodrecommandation/UI_Card_Meals.fxml"));
-                AnchorPane mealCard = fxmlLoader.load();
+
+// Load the FXML directly with the controller
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("UI_Card_Meals.fxml"));
+// System.out.println(getClass().getResource("src/main/resources/com/example/javafx_foodrecommandation/UI_Card_Meals.fxml"));
+                VBox mealCard = fxmlLoader.load();
 
                 // Get the controller associated with the loaded FXML
                 UI_Card_Meals_Controller ui_card_meals = fxmlLoader.getController();
