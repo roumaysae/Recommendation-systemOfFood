@@ -8,6 +8,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,18 +20,45 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import org.bson.Document;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class UI_Consulting_Meals_Controller implements Initializable {
+
+    public BorderPane Container;
+    @FXML
+    private Button buttonBeef ;
+    @FXML
+    private Button buttonChicken ;
+    @FXML
+    private Button buttonDessert ;
+    @FXML
+    private Button buttonLamb ;
+    @FXML
+    private Button buttonMiscellaneous ;
+    @FXML
+    private Button buttonPasta ;
+    @FXML
+    private Button buttonSeafood ;
+    @FXML
+    private Button buttonSide ;
+    @FXML
+    private Button buttonStarter ;
+    @FXML
+    private Button buttonVegan ;
+    @FXML
+    private Button buttonVegetarian ;
+    @FXML
+    private Button buttonBreakfast ;
 
     @FXML
     private VBox categoryButtonsContainer;
@@ -58,6 +86,10 @@ public class UI_Consulting_Meals_Controller implements Initializable {
 
     @FXML
     private ScrollPane scrollPan;
+    @FXML
+    private VBox Meal_container;
+    @FXML
+    private VBox categoryContent;
 
     private Listener listener;
     private List<Meal> mealList = new ArrayList<>();
@@ -77,38 +109,91 @@ public class UI_Consulting_Meals_Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String mongoUri = System.getProperty("mongodb.uri", "mongodb://localhost:27017");
         MongoClient mongoClient = MongoClients.create(mongoUri);
-
-//        MongoClient mongoClient = MongoClients.create(System.getProperty("mongodb.uri"));
-
         database = mongoClient.getDatabase("MealsByCategory");
 
         List<String> categories = List.of("Beef", "Chicken", "Dessert", "Lamb", "Miscellaneous", "Pasta", "Seafood", "Side", "Starter", "Vegan", "Vegetarian", "Breakfast");
 
-        // Populate UI with category buttons
         for (String category : categories) {
-            Button categoryButton = new Button(category);
-            categoryButton.setOnAction(e -> handleCategoryButtonClick(category));
-            categoryButtonsContainer.getChildren().add(categoryButton);
+            if (Objects.equals(category, "Beef")) {
+                buttonBeef.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Chicken")) {
+                buttonChicken.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Dessert")) {
+                buttonDessert.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Lamb")) {
+                buttonLamb.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Miscellaneous")) {
+                buttonMiscellaneous.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Pasta")) {
+                buttonPasta.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Seafood")) {
+                buttonSeafood.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Side")) {
+                buttonSide.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Starter")) {
+                buttonStarter.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Vegan")) {
+                buttonVegan.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Vegetarian")) {
+                buttonVegetarian.setOnAction(e -> handleCategoryButtonClick(category));
+            }
+            if (Objects.equals(category, "Breakfast")) {
+                buttonBreakfast.setOnAction(e -> handleCategoryButtonClick(category));
+            }
         }
-
-        // Initialize UI with the first category
-        handleCategoryButtonClick(categories.get(0));
     }
 
     private void handleCategoryButtonClick(String categoryName) {
-        MongoCollection<Document> categoriesCollection = database.getCollection("categories");
-        Document categoryDocument = categoriesCollection.find(new Document("strCategory", categoryName)).first();
+        System.out.println("Clicked Category: " + categoryName);
+
+        MongoCollection<Document> categoriesCollection = database.getCollection("Categories");
+        Document query = new Document("categories.strCategory", categoryName);
+        Document categoryDocument = categoriesCollection.find(query).first();
 
         if (categoryDocument != null) {
-            List<Document> mealsDocuments = categoryDocument.getList("meals", Document.class);
-            mealList.clear();
-            for (Document mealDocument : mealsDocuments) {
-                Meal meal = convertDocumentToMeal(mealDocument);
-                mealList.add(meal);
+            System.out.println("Category Document: " + categoryDocument.toJson()); // Print categoryDocument
+
+            List<Document> categories = categoryDocument.getList("categories", Document.class);
+
+            if (categories != null && !categories.isEmpty()) {
+                // Assuming you want the first category, change index if needed
+                Document categoryObject = categories.get(0);
+
+                List<Document> mealsDocuments = categoryObject.getList("meals", Document.class);
+
+                if (mealsDocuments != null) {
+                    System.out.println("Meals Documents: " + mealsDocuments);
+
+                    mealList.clear();
+                    for (Document mealDocument : mealsDocuments) {
+                        Meal meal = convertDocumentToMeal(mealDocument);
+                        mealList.add(meal);
+                    }
+                    refreshUI();
+                } else {
+                    System.out.println("Meals Documents is null for: " + categoryName);
+                }
+            } else {
+                System.out.println("No categories found for: " + categoryName);
             }
-            refreshUI();
+        } else {
+            System.out.println("Category document not found for: " + categoryName);
         }
     }
+
+
+
+
 
     private Meal convertDocumentToMeal(Document mealDocument) {
         Meal meal = new Meal();
@@ -118,7 +203,7 @@ public class UI_Consulting_Meals_Controller implements Initializable {
         meal.setInstructions(mealDocument.getString("instructions"));
 
         List<Document> ingredientsDocuments = mealDocument.getList("ingredients", Document.class);
-        List<Ingredient> ingredients = new ArrayList<>();
+        ArrayList<Ingredient> ingredients = new ArrayList<>();
 
         for (Document ingredientDocument : ingredientsDocuments) {
             Ingredient ingredient = new Ingredient();
@@ -127,40 +212,35 @@ public class UI_Consulting_Meals_Controller implements Initializable {
             ingredients.add(ingredient);
         }
 
-        meal.setIngredients((ArrayList<Ingredient>) ingredients);
+        meal.setIngredients(ingredients);
 
         return meal;
     }
 
     // Refreshes the UI with updated mealList
     private void refreshUI() {
-        // Clear existing UI elements
-        gridpane.getChildren().clear();
+        // Clear existing meal cards
+        categoryContent.getChildren().clear();
 
-        // Add new meal cards to the UI
-        int column = 0;
-        int row = 1;
+        // Add new meal cards to the categoryContent VBox
+        for (Meal meal : mealList) {
+            try {
+                // Load the FXML directly with the controller
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UI_Card_Meals.fxml"));
+                System.out.println(getClass().getResource("src/main/resources/com/example/javafx_foodrecommandation/UI_Card_Meals.fxml"));
+                AnchorPane mealCard = fxmlLoader.load();
 
-        try {
-            for (int i = 0; i < mealList.size(); i++) {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("UI_Card_Meals.fxml"));
+                // Get the controller associated with the loaded FXML
+                UI_Card_Meals_Controller ui_card_meals = fxmlLoader.getController();
 
-                UI_Card_Meals_Controller ui_card_meals = new UI_Card_Meals_Controller();
-                ui_card_meals.setData(mealList.get(i), listener);
+                // Set data for each meal card
+                ui_card_meals.setData(meal, listener);
 
-                AnchorPane anchorPane = fxmlLoader.load();
-
-                if (column == 3) {
-                    column = 0;
-                    row++;
-                }
-
-                gridpane.add(anchorPane, column++, row);
-                GridPane.setMargin(anchorPane, new Insets(10));
+                categoryContent.getChildren().add(mealCard);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
+
 }

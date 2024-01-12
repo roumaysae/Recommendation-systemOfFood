@@ -12,9 +12,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+
+import java.util.Objects;
+
 public class UI_Card_Meals_Controller {
+    public VBox Meal_container;
+    public HBox MealName;
     @FXML
     private Button ButtonCard;
     @FXML
@@ -33,7 +39,7 @@ public class UI_Card_Meals_Controller {
         this.listener=listener;
         nameMeal.setText(meal.getTitle());
 
-        Image image = new Image(getClass().getResourceAsStream(meal.getImageMeal()));
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(meal.getImageMeal())));
         ImageCard.setImage(image);
 
     }
