@@ -10,18 +10,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="Meal_container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="404.0" prefWidth="326.0" styleClass="meal-card" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Card_Meals_Controller">
+<VBox fx:id="Meal_container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="404.0" prefWidth="800.0" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_foodrecommandation.presentation.UI_Card_Meals_Controller">
    <children>
-      <HBox fx:id="MealName" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Sushi ">
+            <Label fx:id="nameMeal" text="Sushi ">
                <font>
                   <Font name="Cambria Bold" size="35.0" />
-               </font>
-            </Label>
-            <Label layoutX="110.0" layoutY="23.0" text="Meal">
-               <font>
-                  <Font name="Cambria" size="40.0" />
                </font>
             </Label>
          </children>

@@ -22,7 +22,7 @@
                      <children>
                         <ImageView fitHeight="93.0" fitWidth="111.0">
                            <image>
-                              <Image url="@public/meals_pictures/Korean%20food-cuate.png" />
+                              <Image url="@public/meals_pictures/Korean food-cuate.png" />
                            </image>
                         </ImageView>
                         <Label styleClass="text-color" stylesheets="@../../../Style.css" text="Meals Management System" textAlignment="CENTER">
@@ -161,6 +161,9 @@
                            </image>
                         </ImageView>
                      </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
                   </VBox>
                </children>
             </VBox>
