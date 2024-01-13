@@ -36,34 +36,12 @@ import java.util.ResourceBundle;
 public class UI_Consulting_Meals_Controller implements Initializable {
 
     @FXML
-
     public BorderPane Container;
-    @FXML
 
-    public static Text InstructionsMeal;
     @FXML
+    public VBox chosenmealCard;
 
-    public Label nameMeal;
-    public static Text IngredientMeal;
     @FXML
-
-    public static ImageView imageMeal;
-    @FXML
-
-    public static Label mealCountry;
-    @FXML
-
-    public static VBox chosenmealCard;
-    @FXML
-    public static Label chosenNameMeal;
-    @FXML
-
-    public Button ButtonCard;
-    @FXML
-
-    public ImageView ImageCard;
-    @FXML
-
     public VBox categoryButtonsContainer;
     @FXML
     private Button buttonBeef;
@@ -105,7 +83,7 @@ public class UI_Consulting_Meals_Controller implements Initializable {
 
 
     @FXML
-    void click(MouseEvent mouseEvent){
+    void click(MouseEvent mouseEvent) {
         listener.onclikListener(meal);
     }
 
@@ -221,12 +199,12 @@ public class UI_Consulting_Meals_Controller implements Initializable {
 
         List<Document> ingredientsDocuments = mealDocument.getList("ingredients", Document.class);
         ArrayList<Ingredient> ingredients = new ArrayList<>();
-        int i = 0 ;
+        int i = 0;
         for (Document ingredientDocument : ingredientsDocuments) {
             i++;
             Ingredient ingredient = new Ingredient();
-            ingredient.setName(ingredientDocument.getString("ingredient"+i+"_name"));
-            ingredient.setMeasure(ingredientDocument.getString("ingredient"+i+"_mesure"));
+            ingredient.setName(ingredientDocument.getString("ingredient" + i + "_name"));
+            ingredient.setMesure(ingredientDocument.getString("ingredient" + i + "_mesure"));
             ingredients.add(ingredient);
         }
 
@@ -243,7 +221,6 @@ public class UI_Consulting_Meals_Controller implements Initializable {
         // Add new meal cards to the categoryContent VBox
         for (Meal meal : mealList) {
             try {
-
                 // Load the FXML directly with the controller
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("UI_Card_Meals.fxml"));
                 VBox mealCard = fxmlLoader.load();
@@ -257,10 +234,34 @@ public class UI_Consulting_Meals_Controller implements Initializable {
                 throw new RuntimeException(e);
             }
         }
+
+       /* // Load meal details card for the first meal (assuming mealList is not empty)
+        if (!mealList.isEmpty()) {
+            try {
+                // Load the FXML directly with the controller
+                FXMLLoader detailsLoader = new FXMLLoader(HelloApplication.class.getResource("mealDetails.fxml"));
+                VBox mealDetailsCard = detailsLoader.load();
+
+                mealDetails_Controller mealDetailsController = detailsLoader.getController();
+                mealDetailsController.showMealDetails(meal);
+
+                // Clear existing meal details cards and add the new one
+                chosenmealCard.getChildren().clear();
+                chosenmealCard.getChildren().add(mealDetailsCard);
+                chosenmealCard.setVisible(true);
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }*/
+    }
+
+}
+
         /*// Update the action for ButtonCard
         ButtonCard.setOnAction(UI_Card_Meals_Controller.handleMealButtonClick(meal));*/
 
-    }
+
 
    /* public static void showMealDetails(Meal meal) {
         chosenmealCard.setVisible(false);
@@ -288,4 +289,3 @@ public class UI_Consulting_Meals_Controller implements Initializable {
         chosenmealCard.setVisible(true);
     }*/
 
-}

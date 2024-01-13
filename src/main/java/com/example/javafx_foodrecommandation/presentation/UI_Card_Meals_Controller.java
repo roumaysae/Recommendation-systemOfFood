@@ -14,15 +14,21 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class UI_Card_Meals_Controller {
 
     public VBox Meal_container;
     @FXML
-    public static Button ButtonCard;
+    public Text InstructionsMeal;
+    @FXML
+    public Label mealCountry;
+    @FXML
+    public Text IngredientMeal;
     @FXML
     private ImageView ImageCard;
     @FXML
@@ -39,10 +45,21 @@ public class UI_Card_Meals_Controller {
         this.meal = meal;
         this.listener = listener;
         nameMeal.setText(meal.getTitle());
-
+        InstructionsMeal.setText(meal.getInstructions());
+        IngredientMeal.setText(getIngredientsText(meal.getIngredients()));
+        mealCountry.setText(meal.getCountry());
         Image image = new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream(meal.getImageMeal())));
         ImageCard.setImage(image);
     }
+
+    private String getIngredientsText(ArrayList<Ingredient> ingredients) {
+        StringBuilder ingredientsText = new StringBuilder();
+        for (Ingredient ingredient : ingredients) {
+            ingredientsText.append(ingredient.getName()).append(": ").append(ingredient.getMesure()).append("\n");
+        }
+        return ingredientsText.toString();
+    }
+
 
     /*public static EventHandler<ActionEvent> handleMealButtonClick(Meal meal) {
         return event -> {
@@ -57,6 +74,5 @@ public class UI_Card_Meals_Controller {
 
 
     public void setVisible(ActionEvent actionEvent) {
-        UI_Consulting_Meals_Controller.chosenmealCard.setVisible(true);
     }
 }
