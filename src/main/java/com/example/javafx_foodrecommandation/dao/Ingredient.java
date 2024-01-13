@@ -11,4 +11,12 @@ public class Ingredient {
     public String setMeasure(String ingredient1Mesure) {
         return mesure;
     }
+
+    public char[] getName() {
+        return name.toCharArray();
+    }
+
+    public char[] getMeasure() {
+        return mesure.toCharArray();
+    }
 }

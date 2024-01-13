@@ -9,6 +9,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -33,7 +35,36 @@ import java.util.ResourceBundle;
 
 public class UI_Consulting_Meals_Controller implements Initializable {
 
+    @FXML
+
     public BorderPane Container;
+    @FXML
+
+    public static Text InstructionsMeal;
+    @FXML
+
+    public Label nameMeal;
+    public static Text IngredientMeal;
+    @FXML
+
+    public static ImageView imageMeal;
+    @FXML
+
+    public static Label mealCountry;
+    @FXML
+
+    public static VBox chosenmealCard;
+    @FXML
+    public static Label chosenNameMeal;
+    @FXML
+
+    public Button ButtonCard;
+    @FXML
+
+    public ImageView ImageCard;
+    @FXML
+
+    public VBox categoryButtonsContainer;
     @FXML
     private Button buttonBeef;
     @FXML
@@ -64,11 +95,19 @@ public class UI_Consulting_Meals_Controller implements Initializable {
     private VBox categoryContent;
 
 
-
     private Listener listener;
     private final List<Meal> mealList = new ArrayList<>();
-    private Image image;
     private MongoDatabase database;
+
+    public VBox Meal_container;
+
+    private Meal meal;
+
+
+    @FXML
+    void click(MouseEvent mouseEvent){
+        listener.onclikListener(meal);
+    }
 
     @FXML
     private void HandleBackToFirstPage(ActionEvent event) {
@@ -182,11 +221,12 @@ public class UI_Consulting_Meals_Controller implements Initializable {
 
         List<Document> ingredientsDocuments = mealDocument.getList("ingredients", Document.class);
         ArrayList<Ingredient> ingredients = new ArrayList<>();
-
+        int i = 0 ;
         for (Document ingredientDocument : ingredientsDocuments) {
+            i++;
             Ingredient ingredient = new Ingredient();
-            ingredient.setName(ingredientDocument.getString("ingredient1_name"));
-            ingredient.setMeasure(ingredientDocument.getString("ingredient1_mesure"));
+            ingredient.setName(ingredientDocument.getString("ingredient"+i+"_name"));
+            ingredient.setMeasure(ingredientDocument.getString("ingredient"+i+"_mesure"));
             ingredients.add(ingredient);
         }
 
@@ -208,17 +248,44 @@ public class UI_Consulting_Meals_Controller implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("UI_Card_Meals.fxml"));
                 VBox mealCard = fxmlLoader.load();
 
-                // Get the controller associated with the loaded FXML
-                UI_Card_Meals_Controller ui_card_meals = fxmlLoader.getController();
-
+                UI_Card_Meals_Controller ui_card_controller = fxmlLoader.getController();
                 // Set data for each meal card
-                ui_card_meals.setData(meal, listener);
-
+                ui_card_controller.setData(meal, listener);
                 categoryContent.getChildren().add(mealCard);
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
+        /*// Update the action for ButtonCard
+        ButtonCard.setOnAction(UI_Card_Meals_Controller.handleMealButtonClick(meal));*/
 
     }
+
+   /* public static void showMealDetails(Meal meal) {
+        chosenmealCard.setVisible(false);
+        chosenNameMeal.setText(meal.getTitle());
+        InstructionsMeal.setText(meal.getInstructions());
+
+        // Display ingredients
+        StringBuilder ingredientsText = new StringBuilder();
+        for (Ingredient ingredient : meal.getIngredients()) {
+            ingredientsText.append(ingredient.getName()).append(": ").append(ingredient.getMeasure()).append("\n");
+        }
+        IngredientMeal.setText(ingredientsText.toString());
+
+        // Display meal image
+        Image mealImage = new Image(meal.getImageMeal());
+        imageMeal.setImage(mealImage);
+
+        // Update other UI elements as needed
+        mealCountry.setText("Country: " + meal.getCountry());
+
+
+        //Update the chosenmealCard VBox with the selected meal details
+        chosenmealCard.getChildren().clear();
+        chosenmealCard.getChildren().addAll(chosenNameMeal, InstructionsMeal, IngredientMeal, imageMeal, mealCountry);
+        chosenmealCard.setVisible(true);
+    }*/
+
 }
