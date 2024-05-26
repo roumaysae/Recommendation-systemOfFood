@@ -1,2 +1,2 @@
 # JavafxAPP
-A Desktop application of meals recommandation system
+A Desktop application of meals recommandation system using MONGODB as DATABASE 
